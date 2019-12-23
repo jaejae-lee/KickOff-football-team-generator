@@ -30,8 +30,10 @@ struggled with redux connection.
 
 23rd Mon :
 Listing all players' name 
+
 // current is empty value - why???
-split into two teams 
+
+split into two teams - generate button 
 
 24th Tue:
 player delete func.

@@ -4,6 +4,8 @@ const initial = {
     nameError: false,
     submitted: false,
     fullPlayer: false,
+    teamA: [],
+    teamB: [],
   };
   
   export default initial;

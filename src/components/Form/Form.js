@@ -47,7 +47,7 @@ class Form extends Component {
     
     render() { 
 
-        let { player, nameError, submitted } = this.state;
+        let { player, nameError } = this.state;
 
         return (
             <>

@@ -15,9 +15,18 @@ const addPlayer = (state, action) => ({
     playerList : [...action.form.playerList, action.form.player]
 });
 
+const generateTeams = (state, action) => ({
+    ...state, 
+
+    teamA: state.teamA,
+    teamB: state.teamB,
+
+});
+
 const reducer = (state, action) => {
     switch (action.type){
          case "addPlayer": return addPlayer(state, action);
+         case "generateTeams": return generateTeams(state, action);
          case "reset": return reset(initial);
          default: return state;
     };

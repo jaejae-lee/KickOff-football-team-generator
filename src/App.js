@@ -8,12 +8,12 @@ import Form from './components/Form'
 import PlayerList from './components/PlayerList'
 import TeamGenerator from './components/TeamGenerator';
 
-function App({ fullPlayer }) {
+function App() {
   return (
     <>
       <Header/>
       <Form/>
-      {/* { fullPlayer ? <TeamGenerator/> : null } */}
+      <TeamGenerator/> 
       <PlayerList/>
       <Footer/>
     </>

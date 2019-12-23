@@ -1,5 +1,4 @@
 export const addPlayer = (form) => {
-        console.log('hi');
         return {
             type: "addPlayer",
             form : form
@@ -11,6 +10,15 @@ export const reset = () => {
       type: "reset",
     }; 
 };
+
+export const generateTeams = (teamGenerator) => {
+    console.log('generateTeams');
+    return {
+        type: "generateTeams",
+        teamGenerator : teamGenerator
+    };
+};
+
 
 // export const saveSettings = (data) => {
 //     return {
