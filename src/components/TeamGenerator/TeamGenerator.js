@@ -15,7 +15,8 @@ class TeamGenerator extends Component {
     
     handleTeamSubmit(e) {
         e.preventDefault();
-        this.props.generateTeams();
+        console.log(this.props.playerList);
+        this.props.generateTeams(this.props.playerList);
     }
     
     render() { 

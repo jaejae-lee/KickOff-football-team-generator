@@ -18,8 +18,8 @@ const addPlayer = (state, action) => ({
 const generateTeams = (state, action) => ({
     ...state, 
 
-    teamA: state.teamA,
-    teamB: state.teamB,
+    teamA: action.payload.teamA,
+    teamB: action.payload.teamB,
 
 });
 

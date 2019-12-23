@@ -11,11 +11,26 @@ export const reset = () => {
     }; 
 };
 
-export const generateTeams = (teamGenerator) => {
+export const generateTeams = (playerList) => {
     console.log('generateTeams');
+
+    const teamA = []; 
+    const teamB = []; 
+
+    //loop playerlist and push items into each array 
+    for(let i = 0; i <= playerList.length; i++){
+        //to equally distribute
+        if(teamA.length == teamB.length){
+            teamA.push(playerList[i]);
+        }else{
+            teamB.push(playerList[i]);
+        }
+    }
+
     return {
         type: "generateTeams",
-        teamGenerator : teamGenerator
+        payload : { teamA, teamB } 
+        //payload id an object
     };
 };
 

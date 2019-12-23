@@ -11,36 +11,45 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Tecnologies and skills used
 
+
 ### why I chose these
 
 
 ### What's next..
 
-
 ### Planning 
 
 
-#### Note
+#### Daily Note
 22nd Sun :
 planning (wireframe and MVP), basic set up with gulp.
 Landing page set up with form 
 struggled with redux connection.
 
-// pingpong history reference - not working 
-
 23rd Mon :
 Listing all players' name 
+// current is empty value - solved.
 
-// current is empty value - why???
-
-split into two teams - generate button 
+split into two teams ?
 
 24th Tue:
+background image change - foorball field. 
+font add.
+study payload,
+
+print teamA and teamB in screen 
+show team generate button when it's fullplayer.
+
+
+
 player delete func.
-select position - radio - save 
+select position - radio - save ?
 
 25th Wed:
 split based on positions
+
+26th Thur:
+
 
 
 
