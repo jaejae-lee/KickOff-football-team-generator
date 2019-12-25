@@ -26,25 +26,18 @@ planning (wireframe and MVP), basic set up with gulp.
 Landing page set up with form 
 struggled with redux connection.
 
-23rd Mon :
 
 24th Tue:
 study payload,
 
-show team generate button when it's fullplayer.
-
-//why it pushs empty string into the playerList array??
 
 player delete func.
 select position - radio - save ?
 
 25th Wed:
-background image change - foorball field. 
-font add.
-study payload,
 
-print teamA and teamB in screen 
-show team generate button when it's fullplayer.
+
+study payload,
 
 split based on positions
 //study about payload 
@@ -52,8 +45,19 @@ split based on positions
 player delete func.EJ
 select position - radio - save ?
 
-//gulp file is not working.
+img optimazation
 
+
+
+DEBUGGING
+
+1.comp render condition in APP
+(show team generate button when it's fullplayer.)
+
+2.why it pushs empty string into the playerList array??
+something wrong with length...
+
+//gulp file is not working.
 
 26th Thur:
 

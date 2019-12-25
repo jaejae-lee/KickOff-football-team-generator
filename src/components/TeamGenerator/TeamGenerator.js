@@ -27,7 +27,7 @@ class TeamGenerator extends Component {
             })
         }
 
-        this.props.generateTeams(this.props.playerList);
+        this.props.generateTeams(this.props.playerList); // why is this props not state?
     }
     
     render() { 

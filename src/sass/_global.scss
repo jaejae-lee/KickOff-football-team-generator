@@ -23,7 +23,8 @@ body {
     font-size: 30px;
 
     p{
-        font-size: 1.3rem; 
+        font-family: $fontSub;
+        font-size: 1rem; 
     }
 }
 
@@ -45,11 +46,41 @@ body {
     font-family: $fontMain;
     font-size: 2rem; 
     color: white;
+}
 
+
+.listContainer{
+    display: flex;
+    justify-content: space-between;
+   
     .listItems{
-        background: rgba(255, 255, 255, 0);
+        font-family: $fontSub;
+        background: rgb(224, 94, 94);
+        border-radius: 10px;
+        width: 100%;
+        // flex-grow: 100%;
     } 
-  
+
+    .delBtn{
+        float: right;
+        height: 40%;
+        border-radius: 50px;
+        // flex-grow: 1;
+        // background: pink;
+        // height: 50px;
+    }
+}
+
+.page-footer{
+    font-family: $fontSub;
+    font-size: 0.7rem; 
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 

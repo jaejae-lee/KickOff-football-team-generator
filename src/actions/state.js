@@ -4,6 +4,7 @@ export const addPlayer = (form) => {
             form : form
         };
     };
+//what is form para doing ?
 
 export const reset = () => {
     return {
@@ -12,7 +13,6 @@ export const reset = () => {
 };
 
 export const generateTeams = (playerList) => {
-    console.log('generateTeams');
 
     const teamA = []; 
     const teamB = []; 
@@ -32,6 +32,13 @@ export const generateTeams = (playerList) => {
         payload : { teamA, teamB } 
         //payload is an object
     };
+};
+
+export const deletePlayer = () => {
+    console.log(deletePlayer)
+    return {
+      type: "deletePlayer",
+    }; 
 };
 
   

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
   background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
   object-fit: fill;
@@ -19,7 +20,8 @@ body {
   font-size: 30px;
 }
 .header p {
-  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 .button {
@@ -38,8 +40,35 @@ body {
   font-size: 2rem;
   color: white;
 }
-.listHeader .listItems, .teamHeader .listItems {
-  background: rgba(255, 255, 255, 0);
+
+.listContainer {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.listContainer .listItems {
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+}
+.listContainer .delBtn {
+  float: right;
+  height: 40%;
+  border-radius: 50px;
+}
+
+.page-footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7rem;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
