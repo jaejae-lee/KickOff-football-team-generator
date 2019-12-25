@@ -10,6 +10,7 @@ class Form extends Component {
             playerList: props.playerList,
             nameError: props.nameError,
             submitted: props.submitted,
+            fullPlayer: props.fullPlayer,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
@@ -22,53 +23,63 @@ class Form extends Component {
         })
     }
     
-
     handleSubmit(e) {
         e.preventDefault();
-      
+        console.log(this.state.submitted);
+        console.log(this.state.playerList.length);
+        console.log(this.state.fullPlayer);
+
+        if(this.state.player === "") {
+            this.setState({
+                nameError: true,
+            })
+        }
         if (this.state.player !== ""){
-            console.log(this.state.player);
             this.setState({
                 nameError: false,
                 submitted: true,
                 playerList: [...this.state.playerList, this.state.player],
                 player: '',
-                submitted: true
-            })
-        }else {
-            this.setState({
-                nameError: true,
-                submitted: false
             })
         }
+        if (this.state.playerList.length === 9){
+            this.setState({
+                nameError: false,
+                submitted: true,
+                fullPlayer: true,
+            })
+        }
+    
         this.props.handleSave({...this.state}); 
-        //this.props.handleSave(...this.state); 
     }
     
     render() { 
 
-        let { player, nameError } = this.state;
+        let { player, nameError, fullPlayer, submitted } = this.state;
 
         return (
-            <>
+            
             <form onSubmit={ this.handleSubmit }>
-            <InputGroup className="mb-3">
-                <FormControl
-                placeholder="enter player's name"
-                value={ player }
-                onChange={ this.handleChangeName }  
-                />
-        
-            </InputGroup>
-            <p style={{ display: nameError ? "block" : "none"}}> Please enter player's name </p>
-
-            <InputGroup className="mb-3">
-                <Button variant="primary" size="lg" block
-                        onClick={ this.handleSubmit }
-                >Add this player</Button>
-            </InputGroup>
+                <InputGroup className="mb-3">
+                    <FormControl
+                    placeholder="enter player's name"
+                    value={ player }
+                    onChange={ this.handleChangeName }  
+                    />
+            
+                </InputGroup>
+                
+                <p className= "errorMessage" 
+                    style={{ display: nameError ? "block" : "none"}}> Please enter player's name
+                </p>
+                <InputGroup className="mb-3">
+                    <Button className = "button"
+                            variant="primary" size="lg" block
+                            onClick={ this.handleSubmit }
+                    >Add this player</Button>
+                </InputGroup> 
+                
             </form>
-            </>
         );
     }
 }

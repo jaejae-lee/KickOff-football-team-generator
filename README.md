@@ -27,12 +27,18 @@ Landing page set up with form
 struggled with redux connection.
 
 23rd Mon :
-Listing all players' name 
-// current is empty value - solved.
-
-split into two teams ?
 
 24th Tue:
+study payload,
+
+show team generate button when it's fullplayer.
+
+//why it pushs empty string into the playerList array??
+
+player delete func.
+select position - radio - save ?
+
+25th Wed:
 background image change - foorball field. 
 font add.
 study payload,
@@ -40,13 +46,14 @@ study payload,
 print teamA and teamB in screen 
 show team generate button when it's fullplayer.
 
+split based on positions
+//study about payload 
 
-
-player delete func.
+player delete func.EJ
 select position - radio - save ?
 
-25th Wed:
-split based on positions
+//gulp file is not working.
+
 
 26th Thur:
 

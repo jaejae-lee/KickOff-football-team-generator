@@ -12,12 +12,11 @@ const addPlayer = (state, action) => ({
     player: action.form.player,
     nameError: action.form.nameError,
     submitted: action.form.submitted,
-    playerList : [...action.form.playerList, action.form.player]
+    playerList : [...action.form.playerList, action.form.player],
 });
 
 const generateTeams = (state, action) => ({
     ...state, 
-
     teamA: action.payload.teamA,
     teamB: action.payload.teamB,
 
@@ -31,10 +30,5 @@ const reducer = (state, action) => {
          default: return state;
     };
 };
-
-// console.log(
-//     // if the previous value is 1, we should get 2 if we increment
-//     reducer({ player: "a" }, { type: "addPlayer" })
-// );
 
 export default reducer;

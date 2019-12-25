@@ -1,6 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
 body {
-  background-color: green;
+  background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
+  object-fit: fill;
   margin: 5%;
+}
+@media screen and (max-width: 700px) {
+  body {
+    background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
+    background-blend-mode: lighten;
+    background-size: 100%;
+    margin: 5%;
+  }
+}
+
+.header {
+  font-family: "Bangers", cursive;
+  color: yellow;
+  font-size: 30px;
+}
+.header p {
+  font-size: 1.3rem;
+}
+
+.button {
+  font-family: "Bangers", cursive;
+  background: yellow;
+  color: black;
+  border: none;
+}
+
+.errorMessage {
+  color: white;
+}
+
+.listHeader, .teamHeader {
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  color: white;
+}
+.listHeader .listItems, .teamHeader .listItems {
+  background: rgba(255, 255, 255, 0);
 }
 
 /*# sourceMappingURL=style.css.map */

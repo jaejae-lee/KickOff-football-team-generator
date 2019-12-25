@@ -1,4 +1,55 @@
 body {
-    background-color: green;
+    background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
+    object-fit: fill;
     margin: 5%;   
+
+    //on small screens 
+    @media screen and(max-width : 700px){
+
+        //stadium
+        //background: url(../img/vasiliy-galushko-CqTJeoBZkXo-unsplash.jpg);
+        background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
+
+        background-blend-mode: lighten;
+        background-size: 100%;
+        // object-fit: fill;
+        margin: 5%;   
+    }   
 }
+
+.header {
+    font-family: $fontMain;
+    color: yellow;
+    font-size: 30px;
+
+    p{
+        font-size: 1.3rem; 
+    }
+}
+
+//form
+.button{
+    font-family: $fontMain;
+    background: yellow;
+    color: black;
+    // box-shadow: 10px 5px 5px rgb(91, 91, 91);
+    border: none;
+}
+
+.errorMessage{
+    color: white;
+}
+
+//lists
+.listHeader, .teamHeader{
+    font-family: $fontMain;
+    font-size: 2rem; 
+    color: white;
+
+    .listItems{
+        background: rgba(255, 255, 255, 0);
+    } 
+  
+}
+
+

@@ -13,8 +13,8 @@ function App() {
     <>
       <Header/>
       <Form/>
-      <TeamGenerator/> 
       <PlayerList/>
+      <TeamGenerator/> 
       <Footer/>
     </>
   );

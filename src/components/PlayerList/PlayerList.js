@@ -3,19 +3,18 @@ import { ListGroup }  from 'react-bootstrap';
 
 const PlayerList = ({ playerList }) => (
     <>
-        <h2 className="alert alert-success">Today's players</h2>
+        <h2 className="listHeader">Today's players</h2>
 
         <ListGroup variant="flush">
                 {playerList.map((current, i) => {
-                    console.log(current)
                     return (
                         <p key={i}> 
-                            <ListGroup.Item>{current}</ListGroup.Item>
+                            <ListGroup.Item className="listItems">{current}</ListGroup.Item>
                         </p>
                         )
                 })}
         </ListGroup>
-    </>
+    </> 
 );
 
 export default PlayerList;

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import App from './App';
 
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
@@ -21,7 +21,7 @@ const store = createStore(
 
 ReactDOM.render(
      <Provider store={ store }>
-          <App/>
+          <App />
      </Provider>,
      document.getElementById("root")
 );

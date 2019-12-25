@@ -6,6 +6,8 @@ import { addPlayer } from '../../actions/state';
 const mapStateToProps = state => {
     return {
         playerList: state.playerList,
+        fullPlayer: state.fullPlayer,
+        submitted: state.submitted,
     };
 };
 
