@@ -14,8 +14,14 @@ const mapStateToProps = state => {
 const mapDispatchtoProps = dispatch => {
     return{
         addPlayer: PlayerList => dispatch(addPlayer(PlayerList)),
-        deletePlayer: PlayerList => dispatch(deletePlayer(PlayerList))
+        deletePlayer: PlayerList => dispatch(deletePlayer(PlayerList)),
     }
 };
+
+// const mapDispatchToProps = dispatch => {
+//     return {
+//       delete: todoText => dispatch({type: 'DELETE_TODO', payload: todoText })
+//     }
+//   }
 
 export default connect(mapStateToProps, mapDispatchtoProps)(PlayerList);

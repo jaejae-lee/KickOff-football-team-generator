@@ -21,15 +21,12 @@ const generateTeams = (state, action) => ({
     teamB: action.payload.teamB,
 });
 
-// newState = state.filter( (player) => 
-//                 player.id !== action.payload.id
-//             );
-//                 return newState;
-
 const deletePlayer = (state, action) => ({
     ...state,
-
+    //delete logic here
+  
 });
+
 
 const reducer = (state, action) => {
     switch (action.type){

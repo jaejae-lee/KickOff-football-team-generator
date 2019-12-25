@@ -34,10 +34,10 @@ export const generateTeams = (playerList) => {
     };
 };
 
-export const deletePlayer = () => {
-    console.log(deletePlayer)
+export const deletePlayer = (playerList) => {
     return {
       type: "deletePlayer",
+      payload : { playerList } 
     }; 
 };
 

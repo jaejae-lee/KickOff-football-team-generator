@@ -44,9 +44,9 @@ class TeamGenerator extends Component {
                 <ListGroup variant="flush">
                     {teamA.map((current, i) => {
                         return (
-                            <p key={i}> 
-                                <ListGroup.Item>{current}</ListGroup.Item>
-                            </p>
+                            <div className="listContainer" key={i}> 
+                                <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                            </div>
                             ) 
                     })}
                 </ListGroup>
@@ -56,9 +56,9 @@ class TeamGenerator extends Component {
                     {teamB.map((current, i) => {
                         console.log(current)
                         return (
-                            <p key={i}> 
-                                <ListGroup.Item>{current}</ListGroup.Item>
-                            </p>
+                            <div className="listContainer" key={i}> 
+                                <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                            </div>
                             )
                     })}
                 </ListGroup>

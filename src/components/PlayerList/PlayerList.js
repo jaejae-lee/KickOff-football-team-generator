@@ -8,6 +8,7 @@ class PlayerList extends Component {
         this.state = {
             fullPlayer: props.fullPlayer,
             playerList: props.playerList,
+            submitted: props.submitted,
         }
 
         this.handlePlayerDelete = this.handlePlayerDelete.bind(this); 
@@ -16,22 +17,24 @@ class PlayerList extends Component {
     handlePlayerDelete(e) {
         e.preventDefault();
         console.log(this.props.playerList);
-        console.log(this.state.playerList);
+        console.log(this.state.playerList);//empty
+
         this.props.deletePlayer(this.props.playerList);
     }
     
     render() { 
-        let { playerList } = this.props;
+        let { playerList, submitted } = this.props;
 
         return (
             <>
-                <h2 className="listHeader">Today's players</h2>
+                <h2 className="listHeader"
+                    style={{display: submitted? "block" : "none" }}>Today's players</h2>
 
-                <ListGroup variant="flush">
+                <ListGroup variant="flush"
+                            style={{display: submitted? "block" : "none" }}>
                     {playerList.map((current, i) => {
                             return (
-                                <div className="listContainer"
-                                key={i}> 
+                                <div className="listContainer" key={i}> 
                                     <ListGroup.Item className="listItems">{current}</ListGroup.Item>
                                     <Button className="delBtn"
                                             onClick={ this.handlePlayerDelete }>Delete</Button>

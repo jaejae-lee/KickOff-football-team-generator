@@ -25,17 +25,20 @@ class Form extends Component {
     
     handleSubmit(e) {
         e.preventDefault();
+        console.log(this.state.player);
         console.log(this.state.submitted);
-        console.log(this.state.playerList.length);
-        console.log(this.state.nameError);
-        console.log(this.state.fullPlayer);
+        console.log(this.props.submitted);
+        // console.log(this.state.playerList.length);
+        // console.log(this.state.nameError);
+        // console.log(this.state.fullPlayer);
 
         if(this.state.player === "") {
             this.setState({
+                submitted: false,
                 nameError: true,
             })
         }
-        else if (this.state.player !== ""){
+        if (this.state.player !== ""){
             this.setState({
                 nameError: false,
                 submitted: true,
@@ -48,6 +51,10 @@ class Form extends Component {
                 nameError: false,
                 submitted: true,
                 fullPlayer: true,
+            })
+        }else{
+            this.setState({
+                submitted: true,
             })
         }
     
@@ -69,10 +76,10 @@ class Form extends Component {
                     />
             
                 </InputGroup>
-                
-                    <p className= "errorMessage" 
-                        style={{ display: nameError ? "block" : "none"}} > Please enter player's name
-                    </p>
+
+                    { !nameError? null : 
+                    <p className= "errorMessage"> Please enter player's name
+                    </p> }
 
                 <InputGroup className="mb-3">
                     <Button className = "button"

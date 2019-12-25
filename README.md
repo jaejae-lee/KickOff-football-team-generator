@@ -31,16 +31,17 @@ struggled with redux connection.
 study payload,
 
 
-player delete func.
+
 select position - radio - save ?
 
 25th Wed:
 
 
-study payload,
-
 split based on positions
+
 //study about payload 
+//state & props  in redux 
+//player delete func.
 
 player delete func.EJ
 select position - radio - save ?
@@ -58,6 +59,8 @@ DEBUGGING
 something wrong with length...
 
 //gulp file is not working.
+
+
 
 26th Thur:
 
