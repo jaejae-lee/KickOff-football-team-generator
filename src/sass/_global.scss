@@ -1,53 +1,64 @@
+
+//background image
 body {
-    background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
-    object-fit: fill;
+    background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg) repeat top left;
+    background-size: 100%;
     margin: 5%; 
     font-family: $fontSub;
 
-    //on small screens 
-    @media screen and(max-width : 700px){
-
-        //stadium
-        //background: url(../img/vasiliy-galushko-CqTJeoBZkXo-unsplash.jpg);
-        background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
-
-        background-blend-mode: lighten;
+     //on bigger screens
+     @media screen and(min-width : 700px){
+        background: url(../img/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) 
+        repeat top left;
+        // background: url(../img/ravigopal-kesari-8Q_I_9GlqBI-unsplash.jpg) 
+        //\no-repeat top left;
         background-size: 100%;
-        // object-fit: fill;
-        margin: 5%;   
-    }   
+    }
+
 }
 
-.header {
+//header style
+h1, .h1, .header {
     font-family: $fontMain;
     color: yellow;
-    font-size: 30px;
+    font-size: 40px;
 
     p{
         font-family: $fontSub;
         font-size: 1rem; 
     }
+
+    @media screen and(min-width : 700px){
+        h1, .h1, .header {
+            font-size: 60px;
+            
+            p{
+                font-family: $fontSub;
+                font-size: 1rem; 
+            }
+        }
+    }
 }
 
-//form
-.button{
-    font-family: $fontMain;
-    background: yellow;
-    color: black;
-    // box-shadow: 10px 5px 5px rgb(91, 91, 91);
-    border: none;
+//input form
+.input-group{
+    .form-control{
+        width:100%;
+    }
 }
-
 .errorMessage{
     color: white;
 }
 
 //list style general
-.listHeader, .teamHeader{
+.listHeader{
     font-family: $fontMain;
     font-size: 2rem; 
     color: white;
-    margin-bottom: 0;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 
 .listContainer{
@@ -60,22 +71,6 @@ body {
         width: 100%;
         margin: 5px;
     } 
-    .delBtn{
-        float: right;
-        height: 40%;
-        border-radius: 50px;
-    }
-}
-
-//team list style
-.teamContainer{
-    display: flex;
-    justify-content: space-between;
-
-    .listItems{
-        width: 50%;
-    }
-
 }
 
 .page-footer{

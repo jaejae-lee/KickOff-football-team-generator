@@ -24,7 +24,6 @@ class PlayerList extends Component {
  
         return (
             <>
-
             { playerList.length === 0 ? null :
                 <>
                 <h2 className="listHeader">Today's players</h2>
@@ -37,7 +36,10 @@ class PlayerList extends Component {
                                     <ListGroup.Item className="listItems">{ current}</ListGroup.Item>
 
                                     <Button className="delBtn"
-                                            onClick={ this.handlePlayerDelete }>Delete</Button>
+                                            onClick={ this.handlePlayerDelete}>
+
+                                     <img src="../img/delete.svg" alt="delete"/>
+                                    </Button>
                                 </div>
                                 )
                         }) 

@@ -1,45 +1,53 @@
 @import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
-  background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
-  object-fit: fill;
+  background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg) repeat top left;
+  background-size: 100%;
   margin: 5%;
   font-family: "Roboto", sans-serif;
 }
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   body {
-    background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
-    background-blend-mode: lighten;
+    background: url(../img/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) repeat top left;
     background-size: 100%;
-    margin: 5%;
   }
 }
 
-.header {
+h1, .h1, .header {
   font-family: "Bangers", cursive;
   color: yellow;
-  font-size: 30px;
+  font-size: 40px;
 }
-.header p {
+h1 p, .h1 p, .header p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
+@media screen and (min-width: 700px) {
+  h1 h1, h1 .h1, h1 .header, .h1 h1, .h1 .h1, .h1 .header, .header h1, .header .h1, .header .header {
+    font-size: 60px;
+  }
+  h1 h1 p, h1 .h1 p, h1 .header p, .h1 h1 p, .h1 .h1 p, .h1 .header p, .header h1 p, .header .h1 p, .header .header p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+  }
+}
 
-.button {
-  font-family: "Bangers", cursive;
-  background: yellow;
-  color: black;
-  border: none;
+.input-group .form-control {
+  width: 100%;
 }
 
 .errorMessage {
   color: white;
 }
 
-.listHeader, .teamHeader {
+.listHeader {
   font-family: "Bangers", cursive;
   font-size: 2rem;
   color: white;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 
 .listContainer {
@@ -48,20 +56,9 @@ body {
 }
 .listContainer .listItems {
   font-family: "Roboto", sans-serif;
-  background: white(0.5);
   border-radius: 10px;
   width: 100%;
-  margin: 10px;
-}
-.listContainer .delBtn {
-  float: right;
-  height: 40%;
-  border-radius: 50px;
-}
-
-.teamContainer {
-  display: flex;
-  justify-content: space-evenly;
+  margin: 5px;
 }
 
 .page-footer {
@@ -74,6 +71,68 @@ body {
   width: 100%;
   color: white;
   text-align: center;
+}
+
+.button {
+  font-family: "Bangers", cursive;
+  background: yellow;
+  color: black;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+}
+@media screen and (min-width: 700px) {
+  .button {
+    width: 45%;
+  }
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background: #447e51;
+  border: none;
+}
+
+.teamGenerateBtn {
+  position: static;
+}
+
+.delBtn {
+  background: yellow;
+  float: right;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 5px;
+  border: none;
+}
+
+.teamContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+.teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader, .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader {
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 700px) {
+  .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader, .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader {
+    font-size: 2.5rem;
+  }
+}
+.teamContainer .teamAcontainer {
+  background: rgba(255, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 40%;
+}
+.teamContainer .teamBcontainer {
+  background: rgba(0, 0, 255, 0.5);
+  border-radius: 10px;
+  width: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */

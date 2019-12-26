@@ -1,0 +1,35 @@
+//buttons
+.button{
+    font-family: $fontMain;
+    background: yellow;
+    color: black;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+
+    //on bigger screens
+    @media screen and(min-width : 700px){
+        width: 45%;
+    }
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background:#447e51;
+    border: none;
+}
+
+.teamGenerateBtn{
+    position: static;
+}
+
+.delBtn{
+    background: yellow;
+    float: right;
+    width: 50px;  height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+    border: none;
+}
+

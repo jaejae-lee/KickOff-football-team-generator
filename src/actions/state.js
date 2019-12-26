@@ -1,8 +1,10 @@
+import { statement } from "@babel/template";
+
 export const addPlayer = (form) => {
-        return {
-            type: "addPlayer",
-            form : form
-        };
+    return {
+        type: "addPlayer",
+        form : form
+    };
     };
 //what is form para doing ?
 
@@ -30,15 +32,19 @@ export const generateTeams = (playerList) => {
     return {
         type: "generateTeams",
         payload : { teamA, teamB } 
-        //payload is an object
     };
 };
 
 export const deletePlayer = (playerList) => {
-    return {
-      type: "deletePlayer",
-      payload : { playerList } 
-    }; 
-};
+
+    // const newPlayerList = playerList.splice(playerList.index, 1)
+    // const newPlayerList = playerList.filter(player => player.i !== i)
+
+    // return {
+    //     type: "deletePlayer",
+    //     playerList :  newPlayerList 
+    // }
+}; 
+
 
   

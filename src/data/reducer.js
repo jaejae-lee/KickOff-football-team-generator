@@ -22,11 +22,9 @@ const generateTeams = (state, action) => ({
 });
 
 const deletePlayer = (state, action) => ({
-    ...state,
-    //delete logic here
-  
+   ...state,
+   playerList: action.playerList
 });
-
 
 const reducer = (state, action) => {
     switch (action.type){

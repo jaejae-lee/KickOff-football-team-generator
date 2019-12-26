@@ -78,8 +78,6 @@ class Form extends Component {
                     value={ player }
                     onChange={ this.handleChangeName }  
                     />
-            
-                </InputGroup>
 
                     { !nameError? null : 
                         <p className= "errorMessage"> Please enter player's name
@@ -87,18 +85,16 @@ class Form extends Component {
                     }
 
                     { !fullPlayer? null : 
-                        <p className= "errorMessage"> You have 10 players, now generate teams!
+                        <p className= "errorMessage">  Now generate your team!
                         </p> 
                     }
+                </InputGroup>
 
-                <InputGroup className="mb-3">
-                    <Button className = "button"
-                            variant="primary" size="lg" block
-                            disabled = { fullPlayer ? true : false }
-                            onClick={ this.handleSubmit }
-                    >Add this player</Button>
-                </InputGroup> 
-                
+                <Button className = "button"
+                        variant="primary" size="lg"
+                        disabled = { fullPlayer ? true : false }
+                        onClick={ this.handleSubmit }
+                >Add a player</Button>
             </form>
         );
     }

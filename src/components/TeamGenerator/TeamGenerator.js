@@ -29,7 +29,7 @@ class TeamGenerator extends Component {
             teamGenerated: true,
         })
 
-        this.props.generateTeams(this.props.playerList); // why is this props not state?
+        this.props.generateTeams(this.props.playerList);
     }
     
     render() { 
@@ -38,10 +38,10 @@ class TeamGenerator extends Component {
 
         return (
             <>
-                <Button className="button"
+                <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
                         onClick={ this.handleTeamSubmit }
-                >Generate Teams!</Button>
+                >Generate Teams</Button>
 
 
                 { teamGenerated && fullPlayer ? null 
@@ -53,29 +53,33 @@ class TeamGenerator extends Component {
                 { !fullPlayer ? null :
                 <>
                 <div className ="teamContainer">
-                    <ListGroup variant="flush">
-                        <p className ="teamHeader">Team A</p>
-                            {teamA.map((current, i) => {
-                                return (
-                                    <div className="listContainer" key={i}> 
-                                        <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
-                                    </div>
-                                    ) 
-                            })}
-                    </ListGroup>
-                
-                    <ListGroup variant="flush">
-                        <p className ="teamHeader">Team B</p>
-                            {teamB.map((current, i) => {
-                                console.log(current)
-                                return (
-                                    <div className="listContainer" key={i}> 
-                                        <ListGroup.Item className="listItems">{current}</ListGroup.Item>
-                                    </div>
-                                    )
-                        
-                            })}
-                    </ListGroup>
+                    <div className ="teamAcontainer">
+                        <ListGroup variant="flush">
+                            <p className ="teamHeader">Team A</p>
+                                {teamA.map((current, i) => {
+                                    return (
+                                        <div className="listContainer" key={i}> 
+                                            <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
+                                        </div>
+                                        ) 
+                                })}
+                        </ListGroup>
+                    </div>
+                    
+                    <div className ="teamBcontainer">
+                        <ListGroup variant="flush">
+                            <p className ="teamHeader">Team B</p>
+                                {teamB.map((current, i) => {
+                                    console.log(current)
+                                    return (
+                                        <div className="listContainer" key={i}> 
+                                            <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                                        </div>
+                                        )
+                            
+                                })}
+                        </ListGroup>
+                    </div>
                 </div>
                 </>
                 }

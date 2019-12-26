@@ -9,7 +9,7 @@ import Form from '../Form'
 import PlayerList from '../PlayerList'
 import TeamGenerator from '../TeamGenerator';
 
-function App({ fullPlayer }) {
+function App() {
   return (
     <>
       <Header/>
