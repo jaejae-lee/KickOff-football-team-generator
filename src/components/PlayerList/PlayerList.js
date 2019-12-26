@@ -13,29 +13,29 @@ class PlayerList extends Component {
 
         this.handlePlayerDelete = this.handlePlayerDelete.bind(this); 
     }
-    
+
     handlePlayerDelete(e) {
         e.preventDefault();
-        console.log(this.props.playerList);
-        console.log(this.state.playerList);//empty
-
         this.props.deletePlayer(this.props.playerList);
     }
     
     render() { 
-        let { playerList, submitted } = this.props;
-
+        let { playerList } = this.props; 
+ 
         return (
             <>
-                <h2 className="listHeader"
-                    style={{display: submitted? "block" : "none" }}>Today's players</h2>
 
-                <ListGroup variant="flush"
-                            style={{display: submitted? "block" : "none" }}>
-                    {playerList.map((current, i) => {
+            { playerList.length === 0 ? null :
+                <>
+                <h2 className="listHeader">Today's players</h2>
+
+                <ListGroup variant="flush">
+                    { playerList.map((current, i) => {
                             return (
+
                                 <div className="listContainer" key={i}> 
-                                    <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                                    <ListGroup.Item className="listItems">{ current}</ListGroup.Item>
+
                                     <Button className="delBtn"
                                             onClick={ this.handlePlayerDelete }>Delete</Button>
                                 </div>
@@ -43,7 +43,9 @@ class PlayerList extends Component {
                         }) 
                     }
                 </ListGroup>
-            </>    
+                </>
+            }  
+            </> 
         );
     }
 }

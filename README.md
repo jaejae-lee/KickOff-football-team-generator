@@ -58,9 +58,14 @@ DEBUGGING
 2.why it pushs empty string into the playerList array??
 something wrong with length...
 
+3. if it's full player - dont want to push new value.
+now it's replacing last item ti a new one 
+
 //gulp file is not working.
 
-
+delete
+this.state.your_array.length = 0;
+this.state.array.splice();
 
 26th Thur:
 

@@ -7,7 +7,8 @@ const mapStateToProps = state => {
          fullPlayer: state.fullPlayer,
          teamA: state.teamA,
          teamB: state.teamB,
-         playerList: state.playerList
+         playerList: state.playerList,
+         teamGenerated: state.teamGenerated,
     };
 };
 

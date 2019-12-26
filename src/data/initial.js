@@ -1,11 +1,11 @@
 const initial = {
     player: "",
     playerList: [],
-    nameError: false,
-    submitted: false,
     fullPlayer: false,
+    submitted: false,
     teamA: [],
     teamB: [],
+    teamGenerated: false,
   };
   
   export default initial;

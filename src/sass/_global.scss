@@ -1,7 +1,8 @@
 body {
     background: url(../img/willian-justen-de-vasconcellos-21Cg_fsFBGc-unsplash.jpg);
     object-fit: fill;
-    margin: 5%;   
+    margin: 5%; 
+    font-family: $fontSub;
 
     //on small screens 
     @media screen and(max-width : 700px){
@@ -41,13 +42,13 @@ body {
     color: white;
 }
 
-//lists
+//list style general
 .listHeader, .teamHeader{
     font-family: $fontMain;
     font-size: 2rem; 
     color: white;
+    margin-bottom: 0;
 }
-
 
 .listContainer{
     display: flex;
@@ -55,20 +56,26 @@ body {
    
     .listItems{
         font-family: $fontSub;
-        background: rgb(224, 94, 94);
         border-radius: 10px;
         width: 100%;
-        // flex-grow: 100%;
+        margin: 5px;
     } 
-
     .delBtn{
         float: right;
         height: 40%;
         border-radius: 50px;
-        // flex-grow: 1;
-        // background: pink;
-        // height: 50px;
     }
+}
+
+//team list style
+.teamContainer{
+    display: flex;
+    justify-content: space-between;
+
+    .listItems{
+        width: 50%;
+    }
+
 }
 
 .page-footer{

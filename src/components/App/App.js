@@ -14,7 +14,6 @@ function App({ fullPlayer }) {
     <>
       <Header/>
       <Form/>
-      {/* { fullPlayer ? <TeamGenerator/> : <PlayerList/> } */}
       <TeamGenerator/> 
       <PlayerList/> 
       <Footer/>

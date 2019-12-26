@@ -10,6 +10,7 @@ class TeamGenerator extends Component {
             playerList: props.playerList,
             teamA: props.teamA,
             teamB: props.teamB,
+            teamGenerated: props.teamGenerated,
         }
 
         this.handleTeamSubmit = this.handleTeamSubmit.bind(this); 
@@ -17,21 +18,23 @@ class TeamGenerator extends Component {
     
     handleTeamSubmit(e) {
         e.preventDefault();
-        console.log(this.state.fullPlayer);
-  
-        if (this.state.playerList.length === 9){
+
+        if(this.props.playerList.length >= 9){
             this.setState({
-                // nameError: false,
-                // submitted: true,
                 fullPlayer: true,
             })
         }
+
+        this.setState({
+            teamGenerated: true,
+        })
 
         this.props.generateTeams(this.props.playerList); // why is this props not state?
     }
     
     render() { 
-        let { teamA, teamB } = this.props;
+        let { teamA, teamB, } = this.props;
+        let { teamGenerated, fullPlayer } = this.state;
 
         return (
             <>
@@ -40,28 +43,42 @@ class TeamGenerator extends Component {
                         onClick={ this.handleTeamSubmit }
                 >Generate Teams!</Button>
 
-                <p className ="teamHeader">Team A</p>
-                <ListGroup variant="flush">
-                    {teamA.map((current, i) => {
-                        return (
-                            <div className="listContainer" key={i}> 
-                                <ListGroup.Item className="listItems">{current}</ListGroup.Item>
-                            </div>
-                            ) 
-                    })}
-                </ListGroup>
 
-                <p className ="teamHeader">Team B</p>
-                <ListGroup variant="flush">
-                    {teamB.map((current, i) => {
-                        console.log(current)
-                        return (
-                            <div className="listContainer" key={i}> 
-                                <ListGroup.Item className="listItems">{current}</ListGroup.Item>
-                            </div>
-                            )
-                    })}
-                </ListGroup>
+                { teamGenerated && fullPlayer ? null 
+                    : teamGenerated && !fullPlayer ? 
+                    <p className= "errorMessage"> Please enter 10 player's name first </p> 
+                    : null
+                }
+                
+                { !fullPlayer ? null :
+                <>
+                <div className ="teamContainer">
+                    <ListGroup variant="flush">
+                        <p className ="teamHeader">Team A</p>
+                            {teamA.map((current, i) => {
+                                return (
+                                    <div className="listContainer" key={i}> 
+                                        <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
+                                    </div>
+                                    ) 
+                            })}
+                    </ListGroup>
+                
+                    <ListGroup variant="flush">
+                        <p className ="teamHeader">Team B</p>
+                            {teamB.map((current, i) => {
+                                console.log(current)
+                                return (
+                                    <div className="listContainer" key={i}> 
+                                        <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                                    </div>
+                                    )
+                        
+                            })}
+                    </ListGroup>
+                </div>
+                </>
+                }
             </>    
         );
     }
