@@ -70,7 +70,7 @@ class TeamGenerator extends Component {
                     <FormControl
                     lable="Team B"
                     placeholder="enter the number of team B"
-                    value= { teamBsize }
+                    value= { teamAsize ? teamBsize : "" }
                     onChange={ this.handleChangeTeamASize }
                     />
                 </InputGroup>

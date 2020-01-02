@@ -51,20 +51,14 @@ bg img optimazation
 
 DEBUGGING
 
-3. if it's full player - dont want to push new value.
-now it's replacing last item ti a new one 
-
-
 3rd: 
 why it pushs empty string into the playerList array??
-delete function - add player button diabled
+del button icon add
 CV
 football position?
 
 4th
 Sass
-del button icon add
-
 
 5th
 git hub ReadME
