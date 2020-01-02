@@ -33,7 +33,7 @@ class TeamGenerator extends Component {
 
         this.props.generateTeams({
             ...this.state,
-            playerList
+            playerList,
         })
 
         this.setState({

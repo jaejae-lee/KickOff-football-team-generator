@@ -13,28 +13,28 @@ export const reset = () => {
 
 export const generateTeams = (playerList) => {
 
-    console.log(playerList.playerList.length, "playerlist")
+    console.log(playerList, "playerlist")
+    console.log(playerList.teamAsize, "teamAsize")
 
     const teamA = []; 
     const teamB = []; 
 
-    for(let i = 0; i <= playerList.playerList.length; i++){
-        if(teamA.length === teamB.length){
+    // for(let i = 0; i <= playerList.playerList.length; i++){
+    //     if(teamA.length === teamB.length){
+    //         teamA.push(playerList.playerList[i]);
+    //     }else{
+    //         teamB.push(playerList.playerList[i]);
+    //     }
+    // }
+
+     for(let i = 0; i <= playerList.playerList.length; i++){
+        if(teamA.length < playerList.teamAsize){
             teamA.push(playerList.playerList[i]);
         }else{
             teamB.push(playerList.playerList[i]);
         }
     }
- 
-    // for(let i = 0; i <= playerList.length; i++){
-     
-    //     if(playerList.length < teamAsize ){
-    //         teamA.push(playerList[i]);
-    //     }else{
-    //         teamB.push(playerList[i]);
-    //     }
-    // }
-
+    
     return {
         type: "generateTeams",
         payload : { teamA, teamB }
