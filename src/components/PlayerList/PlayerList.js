@@ -8,6 +8,7 @@ class PlayerList extends Component {
         this.state = {
             fullPlayer: props.fullPlayer,
             playerList: props.playerList,
+            teamGenerated: props.teamGenerated,
         }
 
         this.handlePlayerDelete = this.handlePlayerDelete.bind(this); 
@@ -21,11 +22,11 @@ class PlayerList extends Component {
     }
     
     render() { 
-        let { playerList } = this.props; 
+        let { playerList, teamGenerated } = this.props; 
  
         return (
             <>
-            { playerList.length === 0 ? null :
+            { playerList.length === 0 || teamGenerated ? null :
                 <>
                 <h2 className="listHeader">Today's players</h2>
 

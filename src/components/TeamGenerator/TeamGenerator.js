@@ -16,48 +16,60 @@ class TeamGenerator extends Component {
         }
 
         this.handleTeamSubmit = this.handleTeamSubmit.bind(this); 
+        this.handleChangeTeamASize = this.handleChangeTeamASize.bind(this); 
     }
     
     handleTeamSubmit(e) {
         e.preventDefault();
 
-        if(this.props.playerList.length >= 9){
-            this.setState({
-                fullPlayer: true,
-            })
-        }
+        let { playerList } = this.props;
+
+        this.props.generateTeams(playerList);
 
         this.setState({
             teamGenerated: true,
         })
 
-        this.props.generateTeams(this.props.playerList);
+        if(playerList.length === 10){
+            this.setState({
+                teamGenerated: true,
+                fullPlayer: true,
+            })
+        }
     }
+
+    handleChangeTeamASize(e) {
+
+        this.setState({
+            teamAsize: e.currentTarget.value,
+        })
+    }
+
     
     render() { 
-        let { teamA, teamB, } = this.props; 
-        let {  fullPlayer, teamAsize, teamBsize, teamGenerated } = this.state;
+
+        let { teamA, teamB, playerList } = this.props; 
+        let { fullPlayer, teamAsize, teamGenerated } = this.state;
+        let teamBsizeVal = playerList.length - teamAsize;
 
         return (
             <>
                  <InputGroup className="mb-3">
                     <label className="teamLabel">Team A:</label>
                     <FormControl
-                    disabled={ fullPlayer ?  false : true }
                     placeholder="enter the number of team A"
-                    value={ teamAsize }
-                    onChange={ this.handleChangeTeamSize }  
+                    value= { teamAsize }
+                    onChange={ this.handleChangeTeamASize }
                     />
                 </InputGroup>
 
                 <InputGroup className="mb-3">
                     <label className="teamLabel">Team B:</label>
                     <FormControl
-                    disabled= { fullPlayer ?  false : true }
                     lable="Team B"
                     placeholder="enter the number of team B"
-                    value= { teamBsize }
-                    onChange={ this.handleChangeTeamSize }  
+                    value= { teamBsizeVal }
+                    onChange={ this.handleChangeTeamASize }
                     />
                 </InputGroup>
 

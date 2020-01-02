@@ -16,7 +16,6 @@ class Form extends Component {
 
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this); 
-        this.handleChangeTeamSize = this.handleChangeTeamSize.bind(this); 
     }
 
     handleChangeName(e) {
@@ -24,51 +23,39 @@ class Form extends Component {
             player: e.currentTarget.value,  
         })
     }
-
-    handleChangeTeamSize(e) {
-        let { playerList, teamAsize } = this.state;
-
-        this.setState({
-            teamAsize: e.currentTarget.value,
-            teamBsize: playerList.length - teamAsize -1
-        })
-    }
     
     handleSubmit(e) {
         e.preventDefault();
-         
-        let { playerList, player } = this.props;
+        
+        let { playerList } = this.props;
 
         this.props.handleSave({
             ...this.state,
-            playerList : playerList,
+            playerList
         }); 
 
-        if(player !== "") {
-            this.setState({
-            nameError: false,
-            playerList: [...this.props.playerList, this.state.player],
-            player: "",
-            })
-        }
-
-        else if(player === "") {
+        if(this.state.player === "") {
             this.setState({
                 nameError: true,
-                player: "",
             })
+        }else if(this.state.player !== ""){
+            this.setState({
+                nameError: false,
+                // player: ""
+            })
+
         }
 
-        if(this.props.playerList.length === 9) {
+        if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
             })
-        }
+        }   
     }
     
     render() { 
 
-        let { player, nameError, fullPlayer, teamAsize, teamBsize } = this.state;
+        let { player, nameError, fullPlayer } = this.state;
 
         return (
             
