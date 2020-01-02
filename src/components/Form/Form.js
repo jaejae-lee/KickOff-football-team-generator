@@ -8,11 +8,10 @@ class Form extends Component {
         this.state = {
             player: props.player,
             playerList: props.playerList,
-            nameError: false,
-            submitted: props.submitted,
             fullPlayer: props.fullPlayer,
             teamAsize : props.teamAsize,
             teamBsize: props.teamBsize,
+            nameError: false,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
@@ -37,44 +36,43 @@ class Form extends Component {
     
     handleSubmit(e) {
         e.preventDefault();
+         
+        let { playerList, player } = this.props;
 
-        if (this.state.player !== '' && this.state.playerList.length < 9){
+        this.props.handleSave({
+            ...this.state,
+            playerList : playerList,
+        }); 
+
+        if(player !== "") {
             this.setState({
-                nameError: false,
-                submitted: true,
-                playerList: [...this.state.playerList, this.state.player],
-                player: '',
-            })
-        }else if(this.state.player === '' && this.props.playerList.length >= 9) {
-            this.setState({
-                playerList: this.props.playerList,
-                submitted: true,
-                player: '',
-            })
-        }else if(this.state.player === '' && this.props.playerList.length < 9) {
-            this.setState({
-                playerList: this.props.playerList,
-                nameError: true,
-            })
-        }else if(this.props.playerList.length >= 9){
-            this.setState({
-                playerList: this.props.playerList,
-                fullPlayer: true,
-                submitted: true,
+            nameError: false,
+            playerList: [...this.props.playerList, this.state.player],
+            player: "",
             })
         }
-    
-        this.props.handleSave({...this.state}); 
-        
+
+        else if(player === "") {
+            this.setState({
+                nameError: true,
+                player: "",
+            })
+        }
+
+        if(this.props.playerList.length === 9) {
+            this.setState({
+                fullPlayer: true
+            })
+        }
     }
     
     render() { 
 
-        let { player, nameError, fullPlayer, teamAsize, teamBsize, playerList } = this.state;
+        let { player, nameError, fullPlayer, teamAsize, teamBsize } = this.state;
 
         return (
             
-            <form onSubmit={ this.handleSubmit }>
+            <form onSubmit={ ()=>this.handleSubmit }>
                 <InputGroup className="mb-3">
                     <FormControl
                     placeholder="enter player's name"
@@ -99,26 +97,6 @@ class Form extends Component {
                         onClick={ this.handleSubmit }
                 >Add a player</Button>
 
-                <InputGroup className="mb-3">
-                    <label className="teamLabel">Team A:</label>
-                    <FormControl
-                    disabled={ fullPlayer ?  false : true }
-                    placeholder="enter the number of team A"
-                    value={ teamAsize }
-                    onChange={ this.handleChangeTeamSize }  
-                    />
-                </InputGroup>
-
-                <InputGroup className="mb-3">
-                    <label className="teamLabel">Team B:</label>
-                    <FormControl
-                    disabled= { fullPlayer ?  false : true }
-                    lable="Team B"
-                    placeholder="enter the number of team B"
-                    value= { teamBsize }
-                    onChange={ this.handleChangeTeamSize }  
-                    />
-                </InputGroup>
             </form>
         );
     }

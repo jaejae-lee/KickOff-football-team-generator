@@ -3,7 +3,7 @@ export const addPlayer = (form) => {
         type: "addPlayer",
         form : form
     };
-    };
+};
 
 export const reset = () => {
     return {
@@ -42,9 +42,9 @@ export const generateTeams = (playerList, teamAsize) => {
     };
 };
 
-export const deletePlayer = (playerList, i) => {
+export const deletePlayer = (playerList) => {
 
-    const newPlayerList = playerList.filter(player => player.i !== i)
+    const newPlayerList = playerList.payload.filter((player,index) => index !== playerList.index)
     
     return {
         type: "deletePlayer",

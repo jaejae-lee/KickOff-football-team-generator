@@ -14,7 +14,10 @@ class PlayerList extends Component {
     }
 
     handlePlayerDelete(i) {
-        this.props.deletePlayer(this.props.playerList, i);
+        this.props.deletePlayer({
+            payload : this.props.playerList,
+            index : i
+        });
     }
     
     render() { 
@@ -29,17 +32,17 @@ class PlayerList extends Component {
                 <ListGroup variant="flush">
                     { playerList.map((current, i) => {
                             return (
-
+                                
                                 <div className="listContainer" key={i}> 
                                     <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
 
                                     <Button className="delBtn"
-                                            onClick={ () => this.handlePlayerDelete(i) } >
+                                            onClick={()=>{this.handlePlayerDelete(i)}}>
 
-                                     {/* <img src="../img/delete.svg" alt="delete"/> */}
+                                    {/* <img src="../img/delete.svg" alt="delete"/> */}
                                     </Button>
                                 </div>
-                                )
+                            )
                         }) 
                     }
                 </ListGroup>

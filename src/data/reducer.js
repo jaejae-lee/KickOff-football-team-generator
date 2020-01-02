@@ -11,7 +11,7 @@ const addPlayer = (state, action) => ({
     player: action.form.player,
     nameError: action.form.nameError,
     submitted: action.form.submitted,
-    playerList : [...action.form.playerList, action.form.player],
+    playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
 });
 
 const generateTeams = (state, action) => ({

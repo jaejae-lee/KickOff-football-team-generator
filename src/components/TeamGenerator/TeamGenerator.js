@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup }  from 'react-bootstrap';
+import { Button, ListGroup, InputGroup, FormControl }  from 'react-bootstrap';
 
 class TeamGenerator extends Component {
     constructor(props) {
@@ -11,6 +11,8 @@ class TeamGenerator extends Component {
             teamA: props.teamA,
             teamB: props.teamB,
             teamGenerated: props.teamGenerated,
+            teamAsize : props.teamAsize,
+            teamBsize: props.teamBsize,
         }
 
         this.handleTeamSubmit = this.handleTeamSubmit.bind(this); 
@@ -33,11 +35,32 @@ class TeamGenerator extends Component {
     }
     
     render() { 
-        let { teamA, teamB, } = this.props;
-        let { teamGenerated, fullPlayer } = this.state;
+        let { teamA, teamB, } = this.props; 
+        let {  fullPlayer, teamAsize, teamBsize, teamGenerated } = this.state;
 
         return (
             <>
+                 <InputGroup className="mb-3">
+                    <label className="teamLabel">Team A:</label>
+                    <FormControl
+                    disabled={ fullPlayer ?  false : true }
+                    placeholder="enter the number of team A"
+                    value={ teamAsize }
+                    onChange={ this.handleChangeTeamSize }  
+                    />
+                </InputGroup>
+
+                <InputGroup className="mb-3">
+                    <label className="teamLabel">Team B:</label>
+                    <FormControl
+                    disabled= { fullPlayer ?  false : true }
+                    lable="Team B"
+                    placeholder="enter the number of team B"
+                    value= { teamBsize }
+                    onChange={ this.handleChangeTeamSize }  
+                    />
+                </InputGroup>
+
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
                         onClick={ this.handleTeamSubmit }
@@ -46,7 +69,7 @@ class TeamGenerator extends Component {
 
                 { teamGenerated && fullPlayer ? null 
                     : teamGenerated && !fullPlayer ? 
-                    <p className= "errorMessage"> Please enter 10 player's name first </p> 
+                    <p className= "errorMessage"> Please enter 10 players' name first </p> 
                     : null
                 }
                 
