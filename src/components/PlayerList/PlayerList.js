@@ -8,15 +8,13 @@ class PlayerList extends Component {
         this.state = {
             fullPlayer: props.fullPlayer,
             playerList: props.playerList,
-            submitted: props.submitted,
         }
 
         this.handlePlayerDelete = this.handlePlayerDelete.bind(this); 
     }
 
-    handlePlayerDelete(e) {
-        e.preventDefault();
-        this.props.deletePlayer(this.props.playerList);
+    handlePlayerDelete(i) {
+        this.props.deletePlayer(this.props.playerList, i);
     }
     
     render() { 
@@ -33,12 +31,12 @@ class PlayerList extends Component {
                             return (
 
                                 <div className="listContainer" key={i}> 
-                                    <ListGroup.Item className="listItems">{ current}</ListGroup.Item>
+                                    <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
 
                                     <Button className="delBtn"
-                                            onClick={ this.handlePlayerDelete}>
+                                            onClick={ () => this.handlePlayerDelete(i) } >
 
-                                     <img src="../img/delete.svg" alt="delete"/>
+                                     {/* <img src="../img/delete.svg" alt="delete"/> */}
                                     </Button>
                                 </div>
                                 )

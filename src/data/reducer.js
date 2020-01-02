@@ -1,9 +1,8 @@
 import initial from './initial';
 
-const reset = (initial, state) => {
+const reset = (initial) => {
     return {
         ...initial,
-        submitted: !state.submitted
     };
 }
 

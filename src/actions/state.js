@@ -1,12 +1,9 @@
-import { statement } from "@babel/template";
-
 export const addPlayer = (form) => {
     return {
         type: "addPlayer",
         form : form
     };
     };
-//what is form para doing ?
 
 export const reset = () => {
     return {
@@ -14,15 +11,25 @@ export const reset = () => {
     }; 
 };
 
-export const generateTeams = (playerList) => {
+export const generateTeams = (playerList, teamAsize) => {
 
     const teamA = []; 
     const teamB = []; 
 
     //loop playerlist and push items into each array 
+    // for(let i = 0; i <= playerList.length; i++){
+    //     //to equally distribute
+    //     if(teamA.length === teamB.length){
+    //         teamA.push(playerList[i]);
+    //     }else{
+    //         teamB.push(playerList[i]);
+    //     }
+    // }
+ 
+
     for(let i = 0; i <= playerList.length; i++){
-        //to equally distribute
-        if(teamA.length === teamB.length){
+     
+        if(teamA.length < teamAsize ){
             teamA.push(playerList[i]);
         }else{
             teamB.push(playerList[i]);
@@ -35,15 +42,14 @@ export const generateTeams = (playerList) => {
     };
 };
 
-export const deletePlayer = (playerList) => {
+export const deletePlayer = (playerList, i) => {
 
-    // const newPlayerList = playerList.splice(playerList.index, 1)
-    // const newPlayerList = playerList.filter(player => player.i !== i)
-
-    // return {
-    //     type: "deletePlayer",
-    //     playerList :  newPlayerList 
-    // }
+    const newPlayerList = playerList.filter(player => player.i !== i)
+    
+    return {
+        type: "deletePlayer",
+        playerList : newPlayerList 
+    }
 }; 
 
 

@@ -70,7 +70,6 @@ class TeamGenerator extends Component {
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team B</p>
                                 {teamB.map((current, i) => {
-                                    console.log(current)
                                     return (
                                         <div className="listContainer" key={i}> 
                                             <ListGroup.Item className="listItems">{current}</ListGroup.Item>

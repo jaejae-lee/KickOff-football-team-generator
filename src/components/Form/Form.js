@@ -10,11 +10,14 @@ class Form extends Component {
             playerList: props.playerList,
             nameError: false,
             submitted: props.submitted,
-            fullPlayer: props.fullPlayer
+            fullPlayer: props.fullPlayer,
+            teamAsize : props.teamAsize,
+            teamBsize: props.teamBsize,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.handleChangeTeamSize = this.handleChangeTeamSize.bind(this); 
     }
 
     handleChangeName(e) {
@@ -22,18 +25,18 @@ class Form extends Component {
             player: e.currentTarget.value,  
         })
     }
+
+    handleChangeTeamSize(e) {
+        let { playerList, teamAsize } = this.state;
+
+        this.setState({
+            teamAsize: e.currentTarget.value,
+            teamBsize: playerList.length - teamAsize -1
+        })
+    }
     
     handleSubmit(e) {
         e.preventDefault();
-
-        console.log(this.state.submitted); // true true 
-        console.log(this.props.submitted); // false true 
-        console.log('playerList.length props->state');
-        console.log(this.props.playerList.length); //1 // pushed empty string why??
-        console.log(this.state.playerList.length); //0
-        // console.log(this.state.nameError);
-        // console.log(this.state.fullPlayer);
-        console.log(this.state.player);
 
         if (this.state.player !== '' && this.state.playerList.length < 9){
             this.setState({
@@ -67,7 +70,7 @@ class Form extends Component {
     
     render() { 
 
-        let { player, nameError, fullPlayer } = this.state;
+        let { player, nameError, fullPlayer, teamAsize, teamBsize, playerList } = this.state;
 
         return (
             
@@ -95,6 +98,27 @@ class Form extends Component {
                         disabled = { fullPlayer ? true : false }
                         onClick={ this.handleSubmit }
                 >Add a player</Button>
+
+                <InputGroup className="mb-3">
+                    <label className="teamLabel">Team A:</label>
+                    <FormControl
+                    disabled={ fullPlayer ?  false : true }
+                    placeholder="enter the number of team A"
+                    value={ teamAsize }
+                    onChange={ this.handleChangeTeamSize }  
+                    />
+                </InputGroup>
+
+                <InputGroup className="mb-3">
+                    <label className="teamLabel">Team B:</label>
+                    <FormControl
+                    disabled= { fullPlayer ?  false : true }
+                    lable="Team B"
+                    placeholder="enter the number of team B"
+                    value= { teamBsize }
+                    onChange={ this.handleChangeTeamSize }  
+                    />
+                </InputGroup>
             </form>
         );
     }

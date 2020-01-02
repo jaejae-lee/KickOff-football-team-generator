@@ -31,29 +31,22 @@ struggled with redux connection.
 study payload,
 
 
-
-select position - radio - save ?
-
 25th Wed:
-
 
 split based on positions
 
 //study about payload 
 //state & props  in redux 
 //player delete func.
+//gulp file is not working.
 
 player delete func.EJ
 select position - radio - save ?
+delete all players.
 
-img optimazation
-
-
+bg img optimazation
 
 DEBUGGING
-
-1.comp render condition in APP
-(show team generate button when it's fullplayer.)
 
 2.why it pushs empty string into the playerList array??
 something wrong with length...
@@ -61,13 +54,20 @@ something wrong with length...
 3. if it's full player - dont want to push new value.
 now it's replacing last item ti a new one 
 
-//gulp file is not working.
-
-delete
-this.state.your_array.length = 0;
-this.state.array.splice();
 
 26th Thur:
+
+2nd Jan:
+finish react fun
+CV
+
+3rd: 
+CV
+
+4th
+Sass
+
+
 
 
 

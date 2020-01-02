@@ -1,0 +1,20 @@
+.input-group{
+    .form-control{
+        width:100%;
+    }
+    .teamLabel{
+        color: yellow;
+        font-family: $fontMain;
+        font-size: 1.5rem;
+    }
+}
+.errorMessage{
+    color: white;
+}
+
+
+.form-control:disabled, .form-control:disabled {
+    background-color: white;
+    opacity: 0.5;
+}
+

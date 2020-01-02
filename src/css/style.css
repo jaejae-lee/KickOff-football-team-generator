@@ -32,14 +32,6 @@ h1 p, .h1 p, .header p {
   }
 }
 
-.input-group .form-control {
-  width: 100%;
-}
-
-.errorMessage {
-  color: white;
-}
-
 .listHeader {
   font-family: "Bangers", cursive;
   font-size: 2rem;
@@ -133,6 +125,24 @@ h1 p, .h1 p, .header p {
   background: rgba(0, 0, 255, 0.5);
   border-radius: 10px;
   width: 40%;
+}
+
+.input-group .form-control {
+  width: 100%;
+}
+.input-group .teamLabel {
+  color: yellow;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+}
+
+.errorMessage {
+  color: white;
+}
+
+.form-control:disabled, .form-control:disabled {
+  background-color: white;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */

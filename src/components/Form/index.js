@@ -8,7 +8,9 @@ const mapStateToProps = state => {
         playerList: state.playerList,
         nameError: state.nameError,
         submitted: state.submitted,
-        fullPlayer: state.fullPlayer
+        fullPlayer: state.fullPlayer,
+        teamAsize: state.teamAsize,
+        teamBsize: state.teamBsize,
     };
 };
 
