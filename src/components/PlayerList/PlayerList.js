@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup }  from 'react-bootstrap';
+import { Button, ListGroup, Image }  from 'react-bootstrap';
 
 class PlayerList extends Component {
     constructor(props) {
@@ -40,7 +40,7 @@ class PlayerList extends Component {
                                     <Button className="delBtn"
                                             onClick={()=>{this.handlePlayerDelete(i)}}>
 
-                                    {/* <img src="../img/delete.svg" alt="delete"/> */}
+                                    <Image src="../src/img/delete.svg.jpg" alt="delete icon" />
                                     </Button>
                                 </div>
                             )
