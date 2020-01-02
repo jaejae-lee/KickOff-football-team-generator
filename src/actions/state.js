@@ -11,34 +11,33 @@ export const reset = () => {
     }; 
 };
 
-export const generateTeams = (playerList, teamAsize) => {
+export const generateTeams = (playerList) => {
+
+    console.log(playerList.playerList.length, "playerlist")
 
     const teamA = []; 
     const teamB = []; 
 
-    //loop playerlist and push items into each array 
+    for(let i = 0; i <= playerList.playerList.length; i++){
+        if(teamA.length === teamB.length){
+            teamA.push(playerList.playerList[i]);
+        }else{
+            teamB.push(playerList.playerList[i]);
+        }
+    }
+ 
     // for(let i = 0; i <= playerList.length; i++){
-    //     //to equally distribute
-    //     if(teamA.length === teamB.length){
+     
+    //     if(playerList.length < teamAsize ){
     //         teamA.push(playerList[i]);
     //     }else{
     //         teamB.push(playerList[i]);
     //     }
     // }
- 
-
-    for(let i = 0; i <= playerList.length; i++){
-     
-        if(teamA.length < teamAsize ){
-            teamA.push(playerList[i]);
-        }else{
-            teamB.push(playerList[i]);
-        }
-    }
 
     return {
         type: "generateTeams",
-        payload : { teamA, teamB } 
+        payload : { teamA, teamB }
     };
 };
 

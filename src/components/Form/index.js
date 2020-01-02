@@ -7,10 +7,7 @@ const mapStateToProps = state => {
         player: state.player,
         playerList: state.playerList,
         nameError: state.nameError,
-        submitted: state.submitted,
         fullPlayer: state.fullPlayer,
-        teamAsize: state.teamAsize,
-        teamBsize: state.teamBsize,
     };
 };
 

@@ -6,7 +6,6 @@ const initial = {
     teamB: [],
     teamGenerated: false,
     teamAsize: "",
-    teamBsize: ""
   };
   
   export default initial;

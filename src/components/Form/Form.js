@@ -9,8 +9,6 @@ class Form extends Component {
             player: props.player,
             playerList: props.playerList,
             fullPlayer: props.fullPlayer,
-            teamAsize : props.teamAsize,
-            teamBsize: props.teamBsize,
             nameError: false,
         }
 

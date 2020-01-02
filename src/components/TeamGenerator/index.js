@@ -9,8 +9,7 @@ const mapStateToProps = state => {
          teamB: state.teamB,
          playerList: state.playerList,
          teamGenerated: state.teamGenerated,
-         teamAsize : state.teamAsize,
-         teamBsize: state.teamBsize,
+         teamAsize : state.teamAsize
     };
 };
 
