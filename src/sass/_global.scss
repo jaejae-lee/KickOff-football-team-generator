@@ -1,17 +1,14 @@
-
 //background image
 body {
-    background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg) repeat top left;
+    background: url(../img/smallScreen.jpg) repeat top left;
     background-size: 100%;
     margin: 5%; 
     font-family: $fontSub;
 
      //on bigger screens
      @media screen and(min-width : 700px){
-        background: url(../img/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) 
+        background: url(../img/bigScreen.jpg) 
         repeat top left;
-        // background: url(../img/ravigopal-kesari-8Q_I_9GlqBI-unsplash.jpg) 
-        //\no-repeat top left;
         background-size: 100%;
     }
 

@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
-  background: url(../img/timothy-tan-PAe2UhGo-S4-unsplash.jpg) repeat top left;
+  background: url(../img/smallScreen.jpg) repeat top left;
   background-size: 100%;
   margin: 5%;
   font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 700px) {
   body {
-    background: url(../img/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) repeat top left;
+    background: url(../img/bigScreen.jpg) repeat top left;
     background-size: 100%;
   }
 }

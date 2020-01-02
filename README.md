@@ -37,52 +37,42 @@ speed
 
 
 
-#### Daily Note
-22nd Sun :
-planning (wireframe and MVP), basic set up with gulp.
-Landing page set up with form 
-struggled with redux connection.
 
 
-24th Tue:
-study payload,
 
-
-25th Wed:
 
 split based on positions
 
-//study about payload 
-//state & props  in redux 
-//player delete func.
-//gulp file is not working.
-
 player delete func.EJ
 select position - radio - save ?
-delete all players.
 
+delete all players.
 bg img optimazation
 
 DEBUGGING
-
-2.why it pushs empty string into the playerList array??
-something wrong with length...
 
 3. if it's full player - dont want to push new value.
 now it's replacing last item ti a new one 
 
 
-26th Thur:
-
-2nd Jan:
-finish react fun
-CV
-
 3rd: 
+why it pushs empty string into the playerList array??
+delete function - add player button diabled
 CV
+football position?
 
 4th
 Sass
+del button icon add
+
+
+5th
+git hub ReadME
+wireframe finish
+screenshot add 
+
+
+
 
 
 

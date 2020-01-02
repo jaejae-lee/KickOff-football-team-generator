@@ -13,19 +13,8 @@ export const reset = () => {
 
 export const generateTeams = (playerList) => {
 
-    console.log(playerList, "playerlist")
-    console.log(playerList.teamAsize, "teamAsize")
-
     const teamA = []; 
     const teamB = []; 
-
-    // for(let i = 0; i <= playerList.playerList.length; i++){
-    //     if(teamA.length === teamB.length){
-    //         teamA.push(playerList.playerList[i]);
-    //     }else{
-    //         teamB.push(playerList.playerList[i]);
-    //     }
-    // }
 
      for(let i = 0; i <= playerList.playerList.length; i++){
         if(teamA.length < playerList.teamAsize){

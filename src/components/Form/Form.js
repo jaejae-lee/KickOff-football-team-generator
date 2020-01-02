@@ -53,7 +53,7 @@ class Form extends Component {
     
     render() { 
 
-        let { player, nameError, fullPlayer } = this.state;
+        let { player, nameError } = this.state;
 
         return (
             
@@ -70,7 +70,7 @@ class Form extends Component {
                         </p> 
                     }
 
-                    { !fullPlayer? null : 
+                    { this.props.playerList.length !== 10 ? null : 
                         <p className= "errorMessage">  Now generate your team!
                         </p> 
                     }
@@ -78,7 +78,7 @@ class Form extends Component {
 
                 <Button className = "button"
                         variant="primary" size="lg"
-                        disabled = { fullPlayer ? true : false }
+                        disabled = { this.props.playerList.length === 10 ? true : false }
                         onClick={ this.handleSubmit }
                 >Add a player</Button>
 
