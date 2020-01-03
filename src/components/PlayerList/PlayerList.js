@@ -7,6 +7,7 @@ class PlayerList extends Component {
     
         this.state = {
             fullPlayer: props.fullPlayer,
+            position: props.position,
             playerList: props.playerList,
             teamGenerated: props.teamGenerated,
         }
@@ -22,8 +23,10 @@ class PlayerList extends Component {
     }
     
     render() { 
-        let { playerList, teamGenerated } = this.props; 
- 
+
+        let { playerList, teamGenerated, position } = this.props; 
+        console.log(position)
+
         return (
             <>
             { playerList.length === 0 || teamGenerated ? null :

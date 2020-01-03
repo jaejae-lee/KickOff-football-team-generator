@@ -3,10 +3,10 @@
     background: yellow;
     color: black;
     border: none;
-    display: inline-block;
     width: 100%;
-    margin-top: 10px;
+    margin-right: 5px;
     border: none;
+    font-size: 1.3rem;
 
     //on bigger screens
     @media screen and(min-width : 700px){
@@ -29,24 +29,80 @@
 }
 
 //position select buttons
-.btn-toolbar {
+.positionToolBar.btn-toolbar {
+    display: inline-flex;
     width: 100%;
+    justify-content: space-evenly;
+    margin-top: 20px;
 
-    .buttonContainer{
-        width: 100%;
+    .btn-group, .btn-group-vertical{
+        width: 100%; 
+
+        //on smallest screens
+        @media screen and(max-width : 500px){
+            width: 50%; 
+            flex-wrap: wrap;
+        }
+    }
+
+    .buttonContainer {
         display: flex;
         justify-content: space-between;
 
         .positionBtn{
-            width: 8%;
             word-break: break-all;
+            font-size: 1.2em;
 
             //on smallest screens
             @media screen and(max-width : 500px){
-                font-size: 0.6rem;
+                font-size: 1em;
+                margin-bottom: 5px;
+                width: 78px;
             }
         }
     }
-
 }
+
+.positionToolBar.btn-toolbar .buttonContainer{
+    width: 100%;
+}
+
+// .positionToolBar.btn-toolbar {
+//     width: 100%;
+//     display: inline-flex;
+//     justify-content: space-between;
+//     margin-top: 20px;
+
+//     .btn-group, .btn-group-vertical{
+//         width: 80%; 
+
+//         //on smallest screens
+//         @media screen and(max-width : 500px){
+//             width: 50%; 
+//             flex-wrap: wrap;
+//         }
+      
+//     }
+// }
+
+
+
+//team size select buttons
+.teamSizeToolBar{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.teamSizeBtnContainer, .teamSizeBtnContainer, .teamSizeBtnContainer{
+    width: 124%;
+    display: flex;
+    justify-content: space-between;
+
+    .teamSizeBtn{
+        display: inline-block;
+        width: 37%;
+        height: 37%;
+    }
+}
+
 

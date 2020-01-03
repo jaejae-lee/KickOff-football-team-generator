@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup, InputGroup, FormControl }  from 'react-bootstrap';
+import { Button, ListGroup, InputGroup, FormControl, ButtonToolbar, ToggleButtonGroup, ToggleButton  }  from 'react-bootstrap';
 
 class TeamGenerator extends Component {
     
@@ -54,26 +54,42 @@ class TeamGenerator extends Component {
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
 
-        return (
-            <>
-                 <InputGroup className="mb-3">
-                    <label className="teamLabel">Team A:</label>
-                    <FormControl
-                    placeholder="enter the number of team A"
-                    value= { teamAsize }
-                    onChange={ this.handleChangeTeamASize }
-                    />
-                </InputGroup>
+        console.log(teamAsize, "teamAsize");
+        console.log(teamBsize, "teamBsize");
 
-                <InputGroup className="mb-3">
-                    <label className="teamLabel">Team B:</label>
-                    <FormControl
-                    lable="Team B"
-                    placeholder="enter the number of team B"
-                    value= { teamAsize ? teamBsize : "" }
-                    onChange={ this.handleChangeTeamASize }
-                    />
-                </InputGroup>
+        return (
+
+            <form className="form">
+                <ButtonToolbar className="teamSizeToolBar">
+                    <label className="teamLabel">Team A:</label>
+                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options" defaultValue={5}>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={0} 
+                                          onChange={ this.handleChangeTeamASize }>0</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={1} 
+                                          onChange={ this.handleChangeTeamASize }>1</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={2} 
+                                          onChange={ this.handleChangeTeamASize }>2</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={3} 
+                                          onChange={ this.handleChangeTeamASize }>3</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={4} 
+                                          onChange={ this.handleChangeTeamASize }>4</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={5} 
+                                          onChange={ this.handleChangeTeamASize }>5</ToggleButton>
+                        </ToggleButtonGroup>
+
+                        <div className="teamSizeToolBar"> 
+                            {/* <p className="teamLabel"> team B has  { teamAsize ? teamBsize : "" } players </p> */}
+                            <p className="teamLabel"> Team B : 
+                                <div className="teamBplayer">{ teamAsize ? teamBsize : "" }</div>
+                            </p>
+                        </div>
+                    </ButtonToolbar>
 
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
@@ -119,7 +135,7 @@ class TeamGenerator extends Component {
                 </div>
                 </>
                 }
-            </>    
+            </form>   
         );
     }
 }

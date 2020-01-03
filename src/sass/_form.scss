@@ -1,20 +1,49 @@
+//form and form labels
+.form {
+    border-bottom: 1px solid white;
+    padding: 25px;
+}
+
 .input-group{
     .form-control{
         width:100%;
-    }
-    .teamLabel{
-        color: yellow;
-        font-family: $fontMain;
-        font-size: 1.5rem;
     }
 }
 .errorMessage{
     color: white;
 }
 
-
 .form-control:disabled, .form-control:disabled {
     background-color: white;
     opacity: 0.5;
+}
+
+.positionLabel{
+    color: yellow;
+    font-family: $fontMain;
+    font-size: 1.5rem;
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: 30%;
+
+    @media screen and(max-width : 500px){
+        margin-bottom: 5px;
+    }
+}
+
+.teamLabel{
+    color: yellow;
+    font-family: $fontMain;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.teamBplayer {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    color: black;
+    margin-left: 10px;
 }
 

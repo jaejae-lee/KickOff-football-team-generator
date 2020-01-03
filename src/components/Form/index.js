@@ -5,6 +5,7 @@ import { addPlayer } from '../../actions/state';
 const mapStateToProps = state => {
     return {
         player: state.player,
+        position: state.position,
         playerList: state.playerList,
         nameError: state.nameError,
         fullPlayer: state.fullPlayer,

@@ -9,10 +9,25 @@ const reset = (initial) => {
 const addPlayer = (state, action) => ({
     ...state, 
     player: action.form.player,
+    position: action.form.position,
     nameError: action.form.nameError,
     submitted: action.form.submitted,
-    playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
+
+    
+    // playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
+
+    playerList : [
+        ...action.form.playerList, 
+
+        { 
+            player: action.form.player,
+            position: action.form.position
+        }
+                
+    ] 
 });
+
+
 
 const generateTeams = (state, action) => ({
     ...state, 

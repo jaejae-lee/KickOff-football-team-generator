@@ -6,7 +6,7 @@ body {
   margin: 5%;
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   body {
     background: url(../img/bigScreen.jpg) repeat top left;
     background-size: 100%;
@@ -32,27 +32,6 @@ h1 p, .h1 p, .header p {
   }
 }
 
-.listHeader {
-  font-family: "Bangers", cursive;
-  font-size: 2rem;
-  color: white;
-  margin: 10px 0;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-}
-
-.listContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.listContainer .listItems {
-  font-family: "Roboto", sans-serif;
-  border-radius: 10px;
-  width: 100%;
-  margin: 5px;
-}
-
 .page-footer {
   font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
@@ -70,10 +49,10 @@ h1 p, .h1 p, .header p {
   background: yellow;
   color: black;
   border: none;
-  display: inline-block;
   width: 100%;
-  margin-top: 10px;
+  margin-right: 5px;
   border: none;
+  font-size: 1.3rem;
 }
 @media screen and (min-width: 700px) {
   .button {
@@ -96,22 +75,55 @@ h1 p, .h1 p, .header p {
   border: none;
 }
 
-.btn-toolbar {
+.positionToolBar.btn-toolbar {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.positionToolBar.btn-toolbar .btn-group, .positionToolBar.btn-toolbar .btn-group-vertical {
   width: 100%;
 }
-.btn-toolbar .buttonContainer {
-  width: 100%;
+@media screen and (max-width: 500px) {
+  .positionToolBar.btn-toolbar .btn-group, .positionToolBar.btn-toolbar .btn-group-vertical {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+}
+.positionToolBar.btn-toolbar .buttonContainer {
   display: flex;
   justify-content: space-between;
 }
-.btn-toolbar .buttonContainer .positionBtn {
-  width: 8%;
+.positionToolBar.btn-toolbar .buttonContainer .positionBtn {
   word-break: break-all;
+  font-size: 1.2em;
 }
 @media screen and (max-width: 500px) {
-  .btn-toolbar .buttonContainer .positionBtn {
-    font-size: 0.6rem;
+  .positionToolBar.btn-toolbar .buttonContainer .positionBtn {
+    font-size: 1em;
+    margin-bottom: 5px;
+    width: 78px;
   }
+}
+
+.positionToolBar.btn-toolbar .buttonContainer {
+  width: 100%;
+}
+
+.teamSizeToolBar {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.teamSizeBtnContainer, .teamSizeBtnContainer, .teamSizeBtnContainer {
+  width: 124%;
+  display: flex;
+  justify-content: space-between;
+}
+.teamSizeBtnContainer .teamSizeBtn, .teamSizeBtnContainer .teamSizeBtn, .teamSizeBtnContainer .teamSizeBtn {
+  display: inline-block;
+  width: 37%;
+  height: 37%;
 }
 
 .teamContainer {
@@ -141,13 +153,13 @@ h1 p, .h1 p, .header p {
   width: 40%;
 }
 
+.form {
+  border-bottom: 1px solid white;
+  padding: 25px;
+}
+
 .input-group .form-control {
   width: 100%;
-}
-.input-group .teamLabel {
-  color: yellow;
-  font-family: "Bangers", cursive;
-  font-size: 1.5rem;
 }
 
 .errorMessage {
@@ -157,6 +169,57 @@ h1 p, .h1 p, .header p {
 .form-control:disabled, .form-control:disabled {
   background-color: white;
   opacity: 0.5;
+}
+
+.positionLabel {
+  color: yellow;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  margin-right: 30px;
+  margin-bottom: 0;
+  width: 30%;
+}
+@media screen and (max-width: 500px) {
+  .positionLabel {
+    margin-bottom: 5px;
+  }
+}
+
+.teamLabel {
+  color: yellow;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.teamBplayer {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  color: black;
+  margin-left: 10px;
+}
+
+.listHeader {
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.listContainer .listItems {
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

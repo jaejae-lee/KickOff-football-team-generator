@@ -6,6 +6,7 @@ import { addPlayer, deletePlayer } from '../../actions/state';
 const mapStateToProps = state => {
     return {
         playerList: state.playerList,
+        position: state.position,
         fullPlayer: state.fullPlayer,
         submitted: state.submitted,
     };

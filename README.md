@@ -42,23 +42,19 @@ speed
 
 
 split based on positions
-
-player delete func.EJ
-select position - radio - save ?
-
-delete all players.
-bg img optimazation
-
 DEBUGGING
 
 3rd: 
+save position into playerList.
 why it pushs empty string into the playerList array??
 del button icon add
 CV
-football position?
+
 
 4th
 Sass
+wireframe finish
+screenshot add 
 
 5th
 git hub ReadME
