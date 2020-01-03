@@ -15,7 +15,7 @@ const addPlayer = (state, action) => {
     }
     return {
         ...state,
-        playerList: [...state.playerList, playerObj]
+        playerList: action.form.player ?[...state.playerList, playerObj] : [...state.playerList]
     }
 }
 
