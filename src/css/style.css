@@ -86,10 +86,6 @@ h1 p, .h1 p, .header p {
   border: none;
 }
 
-.teamGenerateBtn {
-  position: static;
-}
-
 .delBtn {
   background: yellow;
   float: right;
@@ -98,6 +94,24 @@ h1 p, .h1 p, .header p {
   border-radius: 25px;
   margin: 5px;
   border: none;
+}
+
+.btn-toolbar {
+  width: 100%;
+}
+.btn-toolbar .buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-toolbar .buttonContainer .positionBtn {
+  width: 8%;
+  word-break: break-all;
+}
+@media screen and (max-width: 500px) {
+  .btn-toolbar .buttonContainer .positionBtn {
+    font-size: 0.6rem;
+  }
 }
 
 .teamContainer {
