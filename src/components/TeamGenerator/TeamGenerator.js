@@ -54,14 +54,11 @@ class TeamGenerator extends Component {
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
 
-        console.log(teamAsize, "teamAsize");
-        console.log(teamBsize, "teamBsize");
-
         return (
 
             <form className="form">
                 <ButtonToolbar className="teamSizeToolBar">
-                    <label className="teamLabel">Team A:</label>
+                    <label className="teamLabel">How many players in Team A ?</label>
                         <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options" defaultValue={5}>
                             <ToggleButton className="button teamSizeBtn" 
                                           value={0} 
@@ -84,10 +81,10 @@ class TeamGenerator extends Component {
                         </ToggleButtonGroup>
 
                         <div className="teamSizeToolBar"> 
-                            {/* <p className="teamLabel"> team B has  { teamAsize ? teamBsize : "" } players </p> */}
-                            <p className="teamLabel"> Team B : 
-                                <div className="teamBplayer">{ teamAsize ? teamBsize : "" }</div>
-                            </p>
+                            <label className="teamLabel"> Team B will have 
+                                <p className="teamBplayer">{ teamAsize ? teamBsize : "" } </p>
+                            players
+                            </label>
                         </div>
                     </ButtonToolbar>
 
@@ -128,7 +125,6 @@ class TeamGenerator extends Component {
                                             <ListGroup.Item className="listItems">{current}</ListGroup.Item>
                                         </div>
                                         )
-                            
                                 })}
                         </ListGroup>
                     </div>

@@ -1,6 +1,6 @@
 .button{
     font-family: $fontMain;
-    background: yellow;
+    background: $colourMain;
     color: black;
     border: none;
     width: 100%;
@@ -8,10 +8,20 @@
     border: none;
     font-size: 1.3rem;
 
+    &:hover{
+        background-color: $ColourThird;
+        color: white;
+    }
+
     //on bigger screens
-    @media screen and(min-width : 700px){
+    @media screen and(min-width : 600px){
         width: 45%;
     }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+    background-color: $ColourSub;
+    color: white;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -20,7 +30,7 @@
 }
 
 .delBtn{
-    background: yellow;
+    background: $colourMain;
     float: right;
     width: 50px;  height: 50px;
     border-radius: 25px;
@@ -52,13 +62,23 @@
         .positionBtn{
             word-break: break-all;
             font-size: 1.2em;
+            background-color: $colourMain;
+
+            &:hover{
+                background-color: $ColourSub;
+                color: white;
+            }
 
             //on smallest screens
-            @media screen and(max-width : 500px){
+            @media screen and(max-width : 600px){
                 font-size: 1em;
                 margin-bottom: 5px;
                 width: 78px;
             }
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active {
+            background-color: $ColourSub;
         }
     }
 }
@@ -66,26 +86,6 @@
 .positionToolBar.btn-toolbar .buttonContainer{
     width: 100%;
 }
-
-// .positionToolBar.btn-toolbar {
-//     width: 100%;
-//     display: inline-flex;
-//     justify-content: space-between;
-//     margin-top: 20px;
-
-//     .btn-group, .btn-group-vertical{
-//         width: 80%; 
-
-//         //on smallest screens
-//         @media screen and(max-width : 500px){
-//             width: 50%; 
-//             flex-wrap: wrap;
-//         }
-      
-//     }
-// }
-
-
 
 //team size select buttons
 .teamSizeToolBar{
@@ -102,7 +102,20 @@
         display: inline-block;
         width: 37%;
         height: 37%;
+        background-color: $colourMain;
+
+        &:hover{
+            background-color: $ColourSub;
+            color: white;
+        }
     }
 }
 
-
+.teamBplayer {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: $colourMain;
+    color: black;
+    margin: 0 10px;
+}

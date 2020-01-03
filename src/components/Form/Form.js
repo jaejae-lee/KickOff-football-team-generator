@@ -35,7 +35,10 @@ class Form extends Component {
 
         this.props.handleSave({
             ...this.state,
-            playerList
+            playerList : {
+                player : this.state.player,
+                position : this.state.position
+            }
         }); 
 
         if(this.state.player === "") {

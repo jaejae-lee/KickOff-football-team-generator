@@ -32,22 +32,16 @@ redux dev tool
 speed
 
 ### What's next..
+React hooks 
+api 
 
 
-
-
-
-
-
-
-
-split based on positions
-DEBUGGING
 
 3rd: 
 save position into playerList.
 why it pushs empty string into the playerList array??
 del button icon add
+mobile ver layout fix
 CV
 
 
@@ -58,6 +52,12 @@ screenshot add
 
 5th
 git hub ReadME
+-add readme about google font.
+-changed bits 
+-detail description of error messages and calculation etc
+
+github site hosting
+
 wireframe finish
 screenshot add 
 

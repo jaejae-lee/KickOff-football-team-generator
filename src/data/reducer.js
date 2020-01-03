@@ -13,18 +13,11 @@ const addPlayer = (state, action) => ({
     nameError: action.form.nameError,
     submitted: action.form.submitted,
 
+    playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
     
-    // playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
-
-    playerList : [
-        ...action.form.playerList, 
-
-        { 
-            player: action.form.player,
-            position: action.form.position
-        }
-                
-    ] 
+    // playerList : [
+    //     ...action.form.playerList
+    // ] 
 });
 
 

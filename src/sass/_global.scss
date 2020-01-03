@@ -3,6 +3,7 @@ body {
     background: url(../img/smallScreen.jpg) repeat top left;
     background-size: 100%;
     margin: 5%; 
+    padding: 10px;
     font-family: $fontSub;
 
      //on bigger screens
@@ -25,7 +26,7 @@ h1, .h1, .header {
         font-size: 1rem; 
     }
 
-    @media screen and(min-width : 700px){
+    @media screen and(min-width : 600px){
         h1, .h1, .header {
             font-size: 60px;
             
