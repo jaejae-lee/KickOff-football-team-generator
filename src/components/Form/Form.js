@@ -32,14 +32,9 @@ class Form extends Component {
         e.preventDefault();
         
         let { playerList } = this.props;
+        console.log(playerList);
 
-        this.props.handleSave({
-            ...this.state,
-            playerList : {
-                player : this.state.player,
-                position : this.state.position
-            }
-        }); 
+        this.props.handleSave(this.state); 
 
         if(this.state.player === "") {
             this.setState({
@@ -51,7 +46,8 @@ class Form extends Component {
                 player: ""
             })
 
-        }if(playerList.length === 9) {
+        }
+        if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
             })

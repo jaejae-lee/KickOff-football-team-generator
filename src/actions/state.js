@@ -1,5 +1,4 @@
 export const addPlayer = (form) => {
-    console.log(form)
     return {
         type: "addPlayer",
         form

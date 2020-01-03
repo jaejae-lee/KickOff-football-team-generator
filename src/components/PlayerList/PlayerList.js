@@ -24,8 +24,8 @@ class PlayerList extends Component {
     
     render() { 
 
-        let { playerList, teamGenerated, position } = this.props; 
-        console.log(position)
+        let { playerList, teamGenerated } = this.props;
+        console.log(playerList); 
 
         return (
             <>
@@ -35,10 +35,11 @@ class PlayerList extends Component {
 
                 <ListGroup variant="flush">
                     { playerList.map((current, i) => {
+                        console.log(current, "current");
+                        console.log(i, "i");
                             return (
-                                
                                 <div className="listContainer" key={i}> 
-                                    <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
+                                    <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
 
                                     <Button className="delBtn"
                                             onClick={()=>{this.handlePlayerDelete(i)}}>
