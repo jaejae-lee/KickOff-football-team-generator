@@ -14,7 +14,7 @@ const addPlayer = (state, action) => {
 
     return {
         ...state,
-        playerList: action.form.player ?[...state.playerList, playerObj] : [...state.playerList]
+        playerList: action.form.player && !(action.form.positionError) ? [...state.playerList, playerObj] : [...state.playerList]
     }
 }
 
@@ -28,10 +28,6 @@ const deletePlayer = (state, action) => ({
    ...state,
    playerList: action.playerList
 });
-
-// const initialState = {
-//     playerList: []
-// };
 
 const reducer = (state, action) => {
     switch (action.type){

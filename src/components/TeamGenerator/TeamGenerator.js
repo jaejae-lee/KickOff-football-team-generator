@@ -91,9 +91,9 @@ class TeamGenerator extends Component {
 
 
                 { teamGenerated && fullPlayer ? 
-                    <p className= "errorMessage"> Don't like the teams? <br/>change the number of players in each team and shuffle it again </p>  
+                    <p className= "errorMessage"> Don't like the teams? <br/>Change the number of players in each team and shuffle it again! </p>  
                     : teamGenerated && !fullPlayer ? 
-                    <p className= "errorMessage"> Please enter 10 players' name first </p> 
+                    <p className= "errorMessage"> Please enter 10 players first </p> 
                     : null
                 }
                 

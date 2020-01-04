@@ -11,6 +11,7 @@ class Form extends Component {
             playerList: props.playerList,
             fullPlayer: props.fullPlayer,
             nameError: false,
+            positionError: false,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
@@ -32,21 +33,46 @@ class Form extends Component {
         e.preventDefault();
         
         let { playerList } = this.props;
+        let { player, position } = this.state;
+
+        let positions = playerList.map(playerobj => playerobj.position)
+
+        let defenders = positions.filter(position => position === "defender")
+        let goalkeepers = positions.filter(position => position === "goalkeeper")
+        let strickers = positions.filter(position => position === "stricker")
+        let midfielders = positions.filter(position => position === "midfielder")
+
+        console.log(positions, "positions")
+        console.log(this.state.positionError)
 
         this.props.handleSave(this.state); 
 
-        if(this.state.player === "") {
+        if(player === "") {
             this.setState({
                 nameError: true,
             })
-        }else if(this.state.player !== ""){
+        }if(position === "defender" && defenders.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }if(position === "goalkeeper" && goalkeepers.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }if(position === "stricker" && strickers.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }if(position === "midfielder" && midfielders.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }if(player !== ""){
             this.setState({
                 nameError: false,
-                player: ""
+                player: "",
             })
-
-        }
-        if(playerList.length === 9) {
+        }if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
             })
@@ -55,7 +81,7 @@ class Form extends Component {
     
     render() { 
 
-        let { player, nameError } = this.state;
+        let { player, position, nameError, positionError } = this.state;
 
         return (
             
@@ -66,6 +92,11 @@ class Form extends Component {
                                  value={ player }
                                  onChange={ this.handleChangeName }  
                     />
+
+                    { !nameError? null : 
+                        <p className= "errorMessage"> Please enter player's name
+                        </p> 
+                    }
 
                 <ButtonToolbar className="positionToolBar">
                     <ToggleButtonGroup className="buttonContainer" type="radio" name="options" defaultValue={1}>
@@ -88,8 +119,8 @@ class Form extends Component {
                     </ToggleButtonGroup>
                 </ButtonToolbar>
 
-                    { !nameError? null : 
-                        <p className= "errorMessage"> Please enter player's name
+                    { !positionError? null : 
+                        <p className= "errorMessage"> Enough { position }s now, select other positions
                         </p> 
                     }
 
