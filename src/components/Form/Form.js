@@ -26,24 +26,25 @@ class Form extends Component {
     }
 
     handleChangePosition(e){
-        this.setState({ position:e.currentTarget.value });
+        this.setState({ 
+            position:e.currentTarget.value,
+            positionError: false
+        });
    };
     
     handleSubmit(e) {
         e.preventDefault();
         
         let { playerList } = this.props;
-        let { player, position } = this.state;
+        let { player, position, positionError } = this.state;
 
         let positions = playerList.map(playerobj => playerobj.position)
-
         let defenders = positions.filter(position => position === "defender")
         let goalkeepers = positions.filter(position => position === "goalkeeper")
         let strickers = positions.filter(position => position === "stricker")
         let midfielders = positions.filter(position => position === "midfielder")
 
-        console.log(positions, "positions")
-        console.log(this.state.positionError)
+        console.log(positionError, "positionError")
 
         this.props.handleSave(this.state); 
 
@@ -51,28 +52,36 @@ class Form extends Component {
             this.setState({
                 nameError: true,
             })
-        }if(position === "defender" && defenders.length >= 2){
+        }
+        if(position === "defender" && defenders.length == 2){
             this.setState({
                 positionError: true,
             })
-        }if(position === "goalkeeper" && goalkeepers.length >= 2){
+        }else if(position === "goalkeeper" && goalkeepers.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }if(position === "stricker" && strickers.length >= 2){
+        }else if(position === "stricker" && strickers.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }if(position === "midfielder" && midfielders.length >= 2){
+        }else if(position === "midfielder" && midfielders.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }if(player !== ""){
+        }else if(player !== ""){
             this.setState({
                 nameError: false,
+                positionError: this.state.positionError,
                 player: "",
             })
-        }if(playerList.length === 9) {
+        }else{
+            this.setState({
+                positionError: this.state.positionError,
+            })
+        }
+        
+        if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
             })
