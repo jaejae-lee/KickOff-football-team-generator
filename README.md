@@ -28,7 +28,12 @@ Each team need to has one of each position player.
 
 * **UI perspective:** small screen(mobile/tablet) optimised design focus, as expecting a lot more use on them rather than desktop.
 
-## Wireframes
+## Wireframes with notes
+
+![wireFrames](./wireFrames/wireFrame-1.png)
+![wireFrames](./wireFrames/wireFrame-2.png)
+![wireFrames](./wireFrames/wireFrame-3.png)
+
 
 ## Screenshots - Small screen
 
