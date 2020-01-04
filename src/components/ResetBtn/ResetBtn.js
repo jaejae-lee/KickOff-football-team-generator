@@ -24,7 +24,7 @@ class ResetBtn extends Component {
         return (
             <Button className = "button resetBtn"
             variant="primary" size="lg"
-            onClick={ this.handleReset }>Reset All</Button>
+            onClick={ this.handleReset }>Reset</Button>
         );
     }
 }
