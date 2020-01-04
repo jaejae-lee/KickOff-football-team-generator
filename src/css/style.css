@@ -194,9 +194,19 @@ h1 p, .h1 p, .header p {
   background: rgba(255, 0, 0, 0.5);
   width: 40%;
 }
+@media screen and (max-width: 600px) {
+  .teamContainer .teamAcontainer {
+    width: 60%;
+  }
+}
 .teamContainer .teamBcontainer {
   background: rgba(0, 0, 255, 0.5);
   width: 40%;
+}
+@media screen and (max-width: 600px) {
+  .teamContainer .teamBcontainer {
+    width: 60%;
+  }
 }
 .teamContainer .list-group {
   padding-bottom: 15px;
@@ -255,6 +265,11 @@ h1 p, .h1 p, .header p {
   width: 70%;
   margin: auto;
 }
+@media screen and (max-width: 600px) {
+  .listContainer {
+    width: 90%;
+  }
+}
 .listContainer .listItems {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -281,7 +296,7 @@ h1 p, .h1 p, .header p {
 }
 @media screen and (max-width: 600px) {
   .listContainer .listItems .playerList-position {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 

@@ -12,6 +12,11 @@
     justify-content: space-between;
     width: 70%;
     margin: auto;
+
+     //on smaller screens
+     @media screen and(max-width : 600px){
+        width: 90%;
+    }
    
     .listItems{
         font-family: $fontSub;
@@ -40,7 +45,7 @@
 
              //on smaller screens
             @media screen and(max-width : 600px){
-                font-size: 1rem;
+                font-size: 0.7rem;
             }
         }
     } 

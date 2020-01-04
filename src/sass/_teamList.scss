@@ -18,11 +18,21 @@
     .teamAcontainer{
         background: rgba(255, 0, 0, 0.5);
         width: 40%;
+
+        //on small screen
+        @media screen and(max-width : 600px){
+            width: 60%;
+        }
     }
 
     .teamBcontainer{
         background: rgba(0, 0, 255, 0.5);
         width: 40%;
+
+         //on small screen
+         @media screen and(max-width : 600px){
+            width: 60%;
+        }
     }
 
     .list-group{

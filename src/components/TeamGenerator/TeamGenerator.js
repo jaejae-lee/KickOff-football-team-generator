@@ -36,14 +36,14 @@ class TeamGenerator extends Component {
         this.setState({
             teamGenerated: true,
         })
-
+        
         if(playerList.length === 10){
             this.setState({
                 teamGenerated: true,
                 fullPlayer: true,
             })
         }
-    }
+    } 
     
     render() { 
         
@@ -91,6 +91,7 @@ class TeamGenerator extends Component {
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
                         onClick={ this.handleTeamSubmit }
+                        disabled={ teamAsize === "" ? true : false}
                 >Generate Teams</Button>
 
 
@@ -99,14 +100,14 @@ class TeamGenerator extends Component {
                     : teamGenerated && !fullPlayer ? 
                     <p className= "errorMessage"> Please enter 10 players first </p> 
                     : null
-                }
+                } 
 
-                { teamGenerated && !teamAsize ? 
+                { teamGenerated && teamAsize === "" ? 
                     <p className= "errorMessage">  Please select the number of players for each team </p>  
                     : null
                 }   
-                
-                { !fullPlayer? null :
+                 
+                { !fullPlayer ? null : 
                 <>
                 <div className ="teamContainer">
                     <div className ="teamAcontainer">

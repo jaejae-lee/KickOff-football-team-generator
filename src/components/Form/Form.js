@@ -41,7 +41,7 @@ class Form extends Component {
         let positions = playerList.map(playerobj => playerobj.position)
         let defenders = positions.filter(position => position === "defender")
         let goalkeepers = positions.filter(position => position === "goalkeeper")
-        let strickers = positions.filter(position => position === "stricker")
+        let strikers = positions.filter(position => position === "striker")
         let midfielders = positions.filter(position => position === "midfielder")
 
         this.props.handleSave(this.state); 
@@ -60,7 +60,7 @@ class Form extends Component {
             this.setState({
                 positionError: true,
             })
-        }else if(position === "stricker" && strickers.length >= 2){
+        }else if(position === "striker" && strikers.length >= 2){
             this.setState({
                 positionError: true,
             })
@@ -72,7 +72,7 @@ class Form extends Component {
             this.setState({
                 nameError: false,
                 positionError: this.state.positionError,
-                player: "",
+                //player: "",
             })
         }else{
             this.setState({
