@@ -170,6 +170,10 @@ h1 p, .h1 p, .header p {
   margin: 0 10px;
 }
 
+.resetBtn {
+  margin-top: 20px;
+}
+
 .teamContainer {
   display: flex;
   justify-content: space-around;
@@ -188,13 +192,14 @@ h1 p, .h1 p, .header p {
 }
 .teamContainer .teamAcontainer {
   background: rgba(255, 0, 0, 0.5);
-  border-radius: 10px;
   width: 40%;
 }
 .teamContainer .teamBcontainer {
   background: rgba(0, 0, 255, 0.5);
-  border-radius: 10px;
   width: 40%;
+}
+.teamContainer .list-group {
+  padding-bottom: 15px;
 }
 
 .form {
@@ -247,24 +252,37 @@ h1 p, .h1 p, .header p {
 .listContainer {
   display: flex;
   justify-content: space-between;
+  width: 70%;
+  margin: auto;
 }
 .listContainer .listItems {
   font-family: "Roboto", sans-serif;
-  border-radius: 10px;
   width: 100%;
   margin: 5px;
   font-size: 1.3rem;
+  padding: 0.5rem 1.25rem;
 }
 .listContainer .listItems .playerList-player {
   font-family: "Bangers", serif;
   color: #2d03e8;
   margin-right: 20px;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  .listContainer .listItems .playerList-player {
+    font-size: 1rem;
+  }
 }
 .listContainer .listItems .playerList-position {
   font-family: "Bangers", serif;
   background-color: red;
   padding: 5px;
   color: white;
+}
+@media screen and (max-width: 600px) {
+  .listContainer .listItems .playerList-position {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PlayerList from './PlayerList';
-import { addPlayer, deletePlayer } from '../../actions/state';
+import { addPlayer, deletePlayer, reset } from '../../actions/state';
 
 
 const mapStateToProps = state => {
@@ -16,6 +16,7 @@ const mapDispatchtoProps = dispatch => {
     return{
         addPlayer: PlayerList => dispatch(addPlayer(PlayerList)),
         deletePlayer: PlayerList => dispatch(deletePlayer(PlayerList)),
+        handleReset: () => dispatch(reset()),
     }
 };
 

@@ -13,8 +13,6 @@ export const reset = () => {
     }; 
 };
 
-
-
 export const generateTeams = (playerList) => {
 
     function shuffleArray (array) {
@@ -29,10 +27,6 @@ export const generateTeams = (playerList) => {
     const shuffledplayerList = shuffleArray(arrPlayerList)
     const teamA = []; 
     const teamB = []; 
-
-    console.log(playerList);
-    console.log(playerList.teamAsize);
-    console.log(shuffledplayerList, "shuffledplayerList");
 
     //generated two arrays
     shuffledplayerList.map((item , index) => {

@@ -21,7 +21,7 @@ class PlayerList extends Component {
             index : i
         });
     }
-    
+
     render() { 
 
         let { playerList, teamGenerated } = this.props;

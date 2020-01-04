@@ -10,25 +10,38 @@
 .listContainer{
     display: flex;
     justify-content: space-between;
+    width: 70%;
+    margin: auto;
    
     .listItems{
         font-family: $fontSub;
-        border-radius: 10px;
         width: 100%;
         margin: 5px;
         font-size: 1.3rem;
+        padding: 0.5rem 1.25rem;
 
         .playerList-player{
             font-family: $fontMain;
             color: $ColourThird;
             margin-right: 20px;
+            font-size: 1.5rem;
+
+            //on smaller screens
+            @media screen and(max-width : 600px){
+                font-size: 1rem;
+            }
         }
 
         .playerList-position{
             font-family: $fontMain;
             background-color: $ColourForth;
             padding: 5px;
-            color: white
+            color: white;
+
+             //on smaller screens
+            @media screen and(max-width : 600px){
+                font-size: 1rem;
+            }
         }
     } 
 

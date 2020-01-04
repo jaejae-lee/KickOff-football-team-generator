@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer'
 import Form from '../Form'
 import PlayerList from '../PlayerList'
 import TeamGenerator from '../TeamGenerator';
+import ResetBtn from '../ResetBtn';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Form/>
       <TeamGenerator/> 
       <PlayerList/> 
+      <ResetBtn/>
       <Footer/>
     </>
   );

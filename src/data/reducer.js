@@ -29,11 +29,11 @@ const deletePlayer = (state, action) => ({
    playerList: action.playerList
 });
 
-const initialState = {
-    playerList: []
-};
+// const initialState = {
+//     playerList: []
+// };
 
-const reducer = (state=initialState, action) => {
+const reducer = (state, action) => {
     switch (action.type){
          case "addPlayer": return addPlayer(state, action);
          case "generateTeams": return generateTeams(state, action);
