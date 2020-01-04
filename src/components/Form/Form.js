@@ -42,7 +42,7 @@ class Form extends Component {
         }else if(this.state.player !== ""){
             this.setState({
                 nameError: false,
-                player: ""
+                // player: ""
             })
 
         }

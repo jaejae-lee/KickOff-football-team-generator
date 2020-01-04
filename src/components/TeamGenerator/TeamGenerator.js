@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup, InputGroup, FormControl, ButtonToolbar, ToggleButtonGroup, ToggleButton  }  from 'react-bootstrap';
+import { Button, ListGroup, ButtonToolbar, ToggleButtonGroup, ToggleButton  }  from 'react-bootstrap';
 
 class TeamGenerator extends Component {
     
@@ -50,10 +50,6 @@ class TeamGenerator extends Component {
         let { teamA, teamB, playerList } = this.props; 
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
-
-        // console.log(playerList, "playerList")
-        console.log(teamB, "teamB")
-        console.log(teamA, "teamA")
 
         return (
 
@@ -107,10 +103,12 @@ class TeamGenerator extends Component {
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team A</p>
                                 { teamA.map((current, i) => {
-                                    console.log(current, "currentA")
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">
+                                                <span className="playerList-player">{ current.player }</span>
+                                                <span className="playerList-position">{ current.position }</span>
+                                            </ListGroup.Item>
                                         </div>
                                         ) 
                                 })}
@@ -121,10 +119,12 @@ class TeamGenerator extends Component {
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team B</p>
                                 { teamB.map((current, i) => {
-                                    console.log(current, "currentB")
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">
+                                                <span className="playerList-player">{ current.player }</span>
+                                                <span className="playerList-position">{ current.position }</span>
+                                            </ListGroup.Item>
                                         </div>
                                         )
                                 })}

@@ -38,7 +38,7 @@ class PlayerList extends Component {
                             return (
                                 <div className="listContainer" key={i}> 
                                     <ListGroup.Item className="listItems">
-                                        <span className="playerList-player" >{ current.player }</span>
+                                        <span className="playerList-player">{ current.player }</span>
                                         <span className="playerList-position">{ current.position }</span>
                                     </ListGroup.Item>
 
