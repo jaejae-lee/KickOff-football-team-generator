@@ -31,10 +31,7 @@ class TeamGenerator extends Component {
 
         let { playerList } = this.props;
 
-        this.props.generateTeams({
-            ...this.state,
-            playerList,
-        })
+         this.props.generateTeams({...this.state, playerList})
 
         this.setState({
             teamGenerated: true,
@@ -54,12 +51,16 @@ class TeamGenerator extends Component {
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
 
+        // console.log(playerList, "playerList")
+        // console.log(teamB, "teamB")
+        // console.log(teamA, "teamA")
+
         return (
 
             <form className="form">
                 <ButtonToolbar className="teamSizeToolBar">
-                    <label className="teamLabel">How many players in Team A ?</label>
-                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options" defaultValue={5}>
+                    <label className="teamLabel">How many players in each team ? <br/> Team A :</label>
+                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options">
                             <ToggleButton className="button teamSizeBtn" 
                                           value={0} 
                                           onChange={ this.handleChangeTeamASize }>0</ToggleButton>
@@ -81,9 +82,8 @@ class TeamGenerator extends Component {
                         </ToggleButtonGroup>
 
                         <div className="teamSizeToolBar"> 
-                            <label className="teamLabel"> Team B will have 
+                            <label className="teamLabel"> Team B : 
                                 <p className="teamBplayer">{ teamAsize ? teamBsize : "" } </p>
-                            players
                             </label>
                         </div>
                     </ButtonToolbar>
@@ -106,10 +106,11 @@ class TeamGenerator extends Component {
                     <div className ="teamAcontainer">
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team A</p>
-                                {teamA.map((current, i) => {
+                                { teamA.map((current, i) => {
+                                    console.log(current, "currentA")
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
                                         </div>
                                         ) 
                                 })}
@@ -119,18 +120,19 @@ class TeamGenerator extends Component {
                     <div className ="teamBcontainer">
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team B</p>
-                                {teamB.map((current, i) => {
+                                { teamB.map((current, i) => {
+                                    console.log(current, "currentB")
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
                                         </div>
                                         )
                                 })}
                         </ListGroup>
                     </div>
                 </div>
-                </>
-                }
+                </> 
+            }
             </form>   
         );
     }

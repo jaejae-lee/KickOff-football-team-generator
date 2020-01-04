@@ -1,12 +1,10 @@
 //list style general
 .listHeader{
     font-family: $fontMain;
-    font-size: 2rem; 
-    color: white;
+    font-size: 2.5rem; 
+    color: $ColourMain;
     margin: 10px 0;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
 }
 
 .listContainer{
@@ -18,5 +16,21 @@
         border-radius: 10px;
         width: 100%;
         margin: 5px;
+        font-size: 1.3rem;
+
+        .playerList-player{
+            font-family: $fontMain;
+            color: $ColourThird;
+            margin-right: 20px;
+        }
+
+        .playerList-position{
+            font-family: $fontMain;
+            background-color: $ColourForth;
+            padding: 5px;
+            color: white
+        }
     } 
+
+
 }

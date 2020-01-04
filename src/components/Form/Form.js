@@ -32,7 +32,6 @@ class Form extends Component {
         e.preventDefault();
         
         let { playerList } = this.props;
-        console.log(playerList);
 
         this.props.handleSave(this.state); 
 
@@ -70,7 +69,7 @@ class Form extends Component {
 
                 <ButtonToolbar className="positionToolBar">
                     <ToggleButtonGroup className="buttonContainer" type="radio" name="options" defaultValue={1}>
-                        <label className="positionLabel">I'm a</label>
+                        <label className="positionLabel">I'm a ...</label>
                         <ToggleButton className="button positionBtn" 
                                         value={"anything"} 
                                         onChange={ this.handleChangePosition }>Anything</ToggleButton>

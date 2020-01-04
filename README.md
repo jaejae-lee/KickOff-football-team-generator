@@ -36,9 +36,8 @@ React hooks
 api 
 
 
-
 3rd: 
-save position into playerList.
+
 why it pushs empty string into the playerList array??
 del button icon add
 mobile ver layout fix
@@ -48,7 +47,6 @@ CV
 4th
 Sass
 wireframe finish
-screenshot add 
 
 5th
 git hub ReadME
@@ -56,10 +54,9 @@ git hub ReadME
 -changed bits 
 -detail description of error messages and calculation etc
 
+screenshot add 
 github site hosting
 
-wireframe finish
-screenshot add 
 
 
 

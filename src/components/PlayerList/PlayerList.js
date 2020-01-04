@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup, Image }  from 'react-bootstrap';
+import { Button, ListGroup }  from 'react-bootstrap';
 
 class PlayerList extends Component {
     constructor(props) {
@@ -25,8 +25,7 @@ class PlayerList extends Component {
     render() { 
 
         let { playerList, teamGenerated } = this.props;
-        console.log(playerList); 
-
+   
         return (
             <>
             { playerList.length === 0 || teamGenerated ? null :
@@ -35,16 +34,17 @@ class PlayerList extends Component {
 
                 <ListGroup variant="flush">
                     { playerList.map((current, i) => {
-                        console.log(current, "current");
-                        console.log(i, "i");
+
                             return (
                                 <div className="listContainer" key={i}> 
-                                    <ListGroup.Item className="listItems">{ current.player }{ current.position }</ListGroup.Item>
+                                    <ListGroup.Item className="listItems">
+                                        <span className="playerList-player" >{ current.player }</span>
+                                        <span className="playerList-position">{ current.position }</span>
+                                    </ListGroup.Item>
 
                                     <Button className="delBtn"
                                             onClick={()=>{this.handlePlayerDelete(i)}}>
-
-                                    <Image src="../src/img/delete.svg.jpg" alt="delete icon" />
+                                    Del
                                     </Button>
                                 </div>
                             )
