@@ -52,8 +52,8 @@ class TeamGenerator extends Component {
         let teamBsize = playerList.length - teamAsize;
 
         // console.log(playerList, "playerList")
-        // console.log(teamB, "teamB")
-        // console.log(teamA, "teamA")
+        console.log(teamB, "teamB")
+        console.log(teamA, "teamA")
 
         return (
 

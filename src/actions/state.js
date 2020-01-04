@@ -18,7 +18,14 @@ export const reset = () => {
 export const generateTeams = (playerList) => {
 
     function shuffleArray (array) {
-        for (let i = array.length - 1; i > 0; i--) {
+        /*
+        console.log(array.length)
+        array.map((item, index)=>{
+            const j = Math.floor(Math.random() * array.length);
+            array[array.length-1] = array.splice(j,1)[0]
+        });*/
+
+        for (let i = array.length - 1; i === 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
@@ -30,13 +37,10 @@ export const generateTeams = (playerList) => {
     const teamA = []; 
     const teamB = []; 
 
-    console.log(shuffledplayerList, "shuffledplayerList") //[{},{},{}]
-    console.log(playerList, "playerList") //{}
-    console.log(playerList.playerList, "playerList.playerList") //[{},{},{}]
-    console.log(playerList.playerList[0], "playerList[0]")//{ player: , position; 0}
-    console.log(playerList.playerList[0].player, "playerList[0].player")
-
-     for(let i = 0; i <= shuffledplayerList.length; i++){
+    
+    //이걸로 teamA 랑 teamB 두개 배열로 나눴는데, teamB에만 자꾸 맨 마지막에? undefinded가 하나씩 들어가요 
+    
+     for(let i = 0; i <= shuffledplayerList.length-1; i++){
          
             if(teamA.length <= shuffledplayerList.teamAsize){
                 teamA.push(shuffledplayerList[i]);
@@ -44,6 +48,15 @@ export const generateTeams = (playerList) => {
                 teamB.push(shuffledplayerList[i]);
             }
     } 
+    
+    /*
+    shuffledplayerList.map((item , index) => {
+        if(teamA.length <= shuffledplayerList.teamAsize){
+            teamA.push(shuffledplayerList[index]);
+        }else{
+            teamB.push(shuffledplayerList[index]);
+        }
+    })*/
 
     return {
         type: "generateTeams",
