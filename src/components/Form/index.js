@@ -8,6 +8,7 @@ const mapStateToProps = state => {
         position: state.position,
         playerList: state.playerList,
         nameError: state.nameError,
+        positionError: state.positionError,
         fullPlayer: state.fullPlayer,
     };
 };

@@ -46,10 +46,14 @@ class TeamGenerator extends Component {
     }
     
     render() { 
-
+        
         let { teamA, teamB, playerList } = this.props; 
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
+
+        console.log(teamAsize, "teamAsize")
+        console.log(teamGenerated, "teamGenerated")
+        
 
         return (
 
@@ -96,8 +100,13 @@ class TeamGenerator extends Component {
                     <p className= "errorMessage"> Please enter 10 players first </p> 
                     : null
                 }
+
+                { teamGenerated && !teamAsize ? 
+                    <p className= "errorMessage">  Please select the number of players for each team </p>  
+                    : null
+                }   
                 
-                { !fullPlayer ? null :
+                { !fullPlayer? null :
                 <>
                 <div className ="teamContainer">
                     <div className ="teamAcontainer">

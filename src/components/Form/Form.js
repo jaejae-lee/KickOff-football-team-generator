@@ -44,13 +44,12 @@ class Form extends Component {
         let strickers = positions.filter(position => position === "stricker")
         let midfielders = positions.filter(position => position === "midfielder")
 
-        console.log(positionError, "positionError")
-
         this.props.handleSave(this.state); 
 
         if(player === "") {
             this.setState({
                 nameError: true,
+                positionError: this.state.positionError,
             })
         }
         if(position === "defender" && defenders.length == 2){
@@ -91,7 +90,8 @@ class Form extends Component {
     render() { 
 
         let { player, position, nameError, positionError } = this.state;
-
+        console.log(positionError, "positionError")
+        console.log(nameError, "nameError")
         return (
             
             <form onSubmit={ ()=>this.handleSubmit }
@@ -128,7 +128,7 @@ class Form extends Component {
                     </ToggleButtonGroup>
                 </ButtonToolbar>
 
-                    { !positionError? null : 
+                    { !positionError ? null : 
                         <p className= "errorMessage"> Enough { position }s now, select other positions
                         </p> 
                     }

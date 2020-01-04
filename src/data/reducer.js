@@ -7,6 +7,7 @@ const reset = (initial) => {
 }
 
 const addPlayer = (state, action) => {
+ 
     const playerObj = {
         player: action.form.player,
         position: action.form.position,  
@@ -14,7 +15,7 @@ const addPlayer = (state, action) => {
 
     return {
         ...state,
-        playerList: action.form.player && action.form.positionError === false ? [...state.playerList, playerObj] : [...state.playerList]
+        playerList: action.form.player && !(action.form.positionError) ? [...state.playerList, playerObj] : [...state.playerList]
     }
 }
 
