@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { Component}  from 'react';
 import { Button }  from 'react-bootstrap';
 
-const ResetBtn = ({ handleReset }) => (
+class ResetBtn extends Component {
 
-    <Button className = "button resetBtn"
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            teamGenerated: props.teamGenerated,
+        }
+        
+        this.handleReset = this.handleReset.bind(this); 
+    }
+
+    handleReset() {
+        this.props.handleReset({...this.state});
+        this.setState({
+            teamGenerated: false,
+        })
+    }
+
+    render() { 
+        return (
+            <Button className = "button resetBtn"
             variant="primary" size="lg"
-            onClick={ handleReset }>Reset All</Button>
-)
-
+            onClick={ this.handleReset }>Reset All</Button>
+        );
+    }
+}
+ 
 export default ResetBtn;
