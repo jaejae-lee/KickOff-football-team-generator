@@ -4,9 +4,10 @@ body {
   background: url(../img/smallScreen.jpg) repeat top left;
   background-size: 100%;
   margin: 5%;
+  padding: 10px;
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   body {
     background: url(../img/bigScreen.jpg) repeat top left;
     background-size: 100%;
@@ -14,7 +15,7 @@ body {
 }
 
 h1, .h1, .header {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", serif;
   color: yellow;
   font-size: 40px;
 }
@@ -22,7 +23,7 @@ h1 p, .h1 p, .header p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   h1 h1, h1 .h1, h1 .header, .h1 h1, .h1 .h1, .h1 .header, .header h1, .header .h1, .header .header {
     font-size: 60px;
   }
@@ -30,27 +31,6 @@ h1 p, .h1 p, .header p {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
   }
-}
-
-.listHeader {
-  font-family: "Bangers", cursive;
-  font-size: 2rem;
-  color: white;
-  margin: 10px 0;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-}
-
-.listContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.listContainer .listItems {
-  font-family: "Roboto", sans-serif;
-  border-radius: 10px;
-  width: 100%;
-  margin: 5px;
 }
 
 .page-footer {
@@ -66,19 +46,29 @@ h1 p, .h1 p, .header p {
 }
 
 .button {
-  font-family: "Bangers", cursive;
-  background: yellow;
-  color: black;
-  border: none;
-  display: inline-block;
+  font-family: "Bangers", serif;
+  background-color: #2d03e8;
+  color: white;
   width: 100%;
-  margin-top: 10px;
+  margin-right: 5px;
   border: none;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-@media screen and (min-width: 700px) {
+.button:hover {
+  background-color: #50ed89;
+  color: white;
+}
+@media screen and (min-width: 600px) {
   .button {
     width: 45%;
   }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #50ed89;
+  color: white;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -86,18 +76,102 @@ h1 p, .h1 p, .header p {
   border: none;
 }
 
-.teamGenerateBtn {
-  position: static;
-}
-
 .delBtn {
-  background: yellow;
+  background: none;
   float: right;
   width: 50px;
   height: 50px;
   border-radius: 25px;
   margin: 5px;
-  border: none;
+  border: 3px solid yellow;
+  font-family: "Bangers", serif;
+  font-size: 1.3rem;
+}
+.delBtn:hover {
+  background-color: rgba(255, 255, 255, 0.479);
+  border: 3px solid #50ed89;
+  color: white;
+}
+
+.positionToolBar.btn-toolbar {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.positionToolBar.btn-toolbar .btn-group, .positionToolBar.btn-toolbar .btn-group-vertical {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .positionToolBar.btn-toolbar .btn-group, .positionToolBar.btn-toolbar .btn-group-vertical {
+    width: 40%;
+    flex-wrap: wrap;
+  }
+}
+.positionToolBar.btn-toolbar .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.positionToolBar.btn-toolbar .buttonContainer .positionBtn {
+  word-break: break-all;
+  font-size: 1.2em;
+  background-color: yellow;
+  color: black;
+  margin-top: 0;
+}
+.positionToolBar.btn-toolbar .buttonContainer .positionBtn:hover {
+  background-color: #50ed89;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .positionToolBar.btn-toolbar .buttonContainer .positionBtn {
+    font-size: 1em;
+    margin-bottom: 5px;
+    width: 78px;
+  }
+}
+.positionToolBar.btn-toolbar .buttonContainer .btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #50ed89;
+}
+
+.positionToolBar.btn-toolbar .buttonContainer {
+  width: 100%;
+}
+
+.teamSizeToolBar {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.teamSizeBtnContainer, .teamSizeBtnContainer, .teamSizeBtnContainer {
+  width: 124%;
+  display: flex;
+  justify-content: space-between;
+}
+.teamSizeBtnContainer .teamSizeBtn, .teamSizeBtnContainer .teamSizeBtn, .teamSizeBtnContainer .teamSizeBtn {
+  display: inline-block;
+  width: 37%;
+  height: 37%;
+  background-color: yellow;
+  color: black;
+  margin-top: 0;
+}
+.teamSizeBtnContainer .teamSizeBtn:hover, .teamSizeBtnContainer .teamSizeBtn:hover, .teamSizeBtnContainer .teamSizeBtn:hover {
+  background-color: #50ed89;
+  color: white;
+}
+
+.teamBplayer {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+  color: black;
+  margin: 0 10px;
+}
+
+.resetBtn {
+  margin-top: 20px;
 }
 
 .teamContainer {
@@ -106,34 +180,35 @@ h1 p, .h1 p, .header p {
   margin: 5%;
 }
 .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader, .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", serif;
   font-size: 2rem;
   color: white;
   margin-bottom: 0;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader, .teamContainer .h1, .teamContainer h1, .teamContainer .teamHeader {
     font-size: 2.5rem;
   }
 }
 .teamContainer .teamAcontainer {
   background: rgba(255, 0, 0, 0.5);
-  border-radius: 10px;
   width: 40%;
 }
 .teamContainer .teamBcontainer {
   background: rgba(0, 0, 255, 0.5);
-  border-radius: 10px;
   width: 40%;
+}
+.teamContainer .list-group {
+  padding-bottom: 15px;
+}
+
+.form {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
 }
 
 .input-group .form-control {
   width: 100%;
-}
-.input-group .teamLabel {
-  color: yellow;
-  font-family: "Bangers", cursive;
-  font-size: 1.5rem;
 }
 
 .errorMessage {
@@ -143,6 +218,71 @@ h1 p, .h1 p, .header p {
 .form-control:disabled, .form-control:disabled {
   background-color: white;
   opacity: 0.5;
+}
+
+.positionLabel {
+  color: yellow;
+  font-family: "Bangers", serif;
+  font-size: 1.5rem;
+  margin-right: 30px;
+  margin-bottom: 0;
+  width: 30%;
+}
+@media screen and (max-width: 600px) {
+  .positionLabel {
+    margin-bottom: 5px;
+  }
+}
+
+.teamLabel {
+  color: yellow;
+  font-family: "Bangers", serif;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.listHeader {
+  font-family: "Bangers", serif;
+  font-size: 2.5rem;
+  color: yellow;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.listContainer .listItems {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin: 5px;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.25rem;
+}
+.listContainer .listItems .playerList-player {
+  font-family: "Bangers", serif;
+  color: #2d03e8;
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  .listContainer .listItems .playerList-player {
+    font-size: 1rem;
+  }
+}
+.listContainer .listItems .playerList-position {
+  font-family: "Bangers", serif;
+  background-color: red;
+  padding: 5px;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .listContainer .listItems .playerList-position {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

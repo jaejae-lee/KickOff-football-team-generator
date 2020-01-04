@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { InputGroup, FormControl, Button }  from 'react-bootstrap';
+import { InputGroup, FormControl, Button, ButtonToolbar, ToggleButtonGroup, ToggleButton }  from 'react-bootstrap';
 
 class Form extends Component {
     constructor(props) {
@@ -7,6 +7,7 @@ class Form extends Component {
     
         this.state = {
             player: props.player,
+            position: props.position,
             playerList: props.playerList,
             fullPlayer: props.fullPlayer,
             nameError: false,
@@ -14,6 +15,7 @@ class Form extends Component {
 
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this); 
+        this.handleChangePosition = this.handleChangePosition.bind(this); 
     }
 
     handleChangeName(e) {
@@ -21,16 +23,17 @@ class Form extends Component {
             player: e.currentTarget.value,  
         })
     }
+
+    handleChangePosition(e){
+        this.setState({ position:e.currentTarget.value });
+   };
     
     handleSubmit(e) {
         e.preventDefault();
         
         let { playerList } = this.props;
 
-        this.props.handleSave({
-            ...this.state,
-            playerList
-        }); 
+        this.props.handleSave(this.state); 
 
         if(this.state.player === "") {
             this.setState({
@@ -39,11 +42,10 @@ class Form extends Component {
         }else if(this.state.player !== ""){
             this.setState({
                 nameError: false,
-                player: ""
+                // player: ""
             })
 
         }
-
         if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
@@ -57,13 +59,34 @@ class Form extends Component {
 
         return (
             
-            <form onSubmit={ ()=>this.handleSubmit }>
+            <form onSubmit={ ()=>this.handleSubmit }
+                  className="form">
                 <InputGroup className="mb-3">
-                    <FormControl
-                    placeholder="enter player's name"
-                    value={ player }
-                    onChange={ this.handleChangeName }  
+                    <FormControl placeholder="enter player's name"
+                                 value={ player }
+                                 onChange={ this.handleChangeName }  
                     />
+
+                <ButtonToolbar className="positionToolBar">
+                    <ToggleButtonGroup className="buttonContainer" type="radio" name="options" defaultValue={1}>
+                        <label className="positionLabel">I'm a ...</label>
+                        <ToggleButton className="button positionBtn" 
+                                        value={"anything"} 
+                                        onChange={ this.handleChangePosition }>Anything</ToggleButton>
+                        <ToggleButton className="button positionBtn" 
+                                        value={"defender"} 
+                                        onChange={ this.handleChangePosition }>Defender</ToggleButton>
+                        <ToggleButton className="button positionBtn" 
+                                        value={"goalkeeper"} 
+                                        onChange={ this.handleChangePosition }>Goalkeeper</ToggleButton>
+                        <ToggleButton className="button positionBtn" 
+                                        value={"striker"} 
+                                        onChange={ this.handleChangePosition }>Striker</ToggleButton>
+                        <ToggleButton className="button positionBtn" 
+                                        value={"midfielder"} 
+                                        onChange={ this.handleChangePosition }>Midfielder</ToggleButton>
+                    </ToggleButtonGroup>
+                </ButtonToolbar>
 
                     { !nameError? null : 
                         <p className= "errorMessage"> Please enter player's name

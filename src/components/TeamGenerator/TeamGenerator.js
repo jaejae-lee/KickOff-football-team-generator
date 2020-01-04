@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ListGroup, InputGroup, FormControl }  from 'react-bootstrap';
+import { Button, ListGroup, ButtonToolbar, ToggleButtonGroup, ToggleButton  }  from 'react-bootstrap';
 
 class TeamGenerator extends Component {
     
@@ -31,10 +31,7 @@ class TeamGenerator extends Component {
 
         let { playerList } = this.props;
 
-        this.props.generateTeams({
-            ...this.state,
-            playerList,
-        })
+         this.props.generateTeams({...this.state, playerList})
 
         this.setState({
             teamGenerated: true,
@@ -55,25 +52,37 @@ class TeamGenerator extends Component {
         let teamBsize = playerList.length - teamAsize;
 
         return (
-            <>
-                 <InputGroup className="mb-3">
-                    <label className="teamLabel">Team A:</label>
-                    <FormControl
-                    placeholder="enter the number of team A"
-                    value= { teamAsize }
-                    onChange={ this.handleChangeTeamASize }
-                    />
-                </InputGroup>
 
-                <InputGroup className="mb-3">
-                    <label className="teamLabel">Team B:</label>
-                    <FormControl
-                    lable="Team B"
-                    placeholder="enter the number of team B"
-                    value= { teamAsize ? teamBsize : "" }
-                    onChange={ this.handleChangeTeamASize }
-                    />
-                </InputGroup>
+            <form className="form">
+                <ButtonToolbar className="teamSizeToolBar">
+                    <label className="teamLabel">How many players in each team ? <br/> Team A :</label>
+                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options">
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={0} 
+                                          onChange={ this.handleChangeTeamASize }>0</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={1} 
+                                          onChange={ this.handleChangeTeamASize }>1</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={2} 
+                                          onChange={ this.handleChangeTeamASize }>2</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={3} 
+                                          onChange={ this.handleChangeTeamASize }>3</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={4} 
+                                          onChange={ this.handleChangeTeamASize }>4</ToggleButton>
+                            <ToggleButton className="button teamSizeBtn" 
+                                          value={5} 
+                                          onChange={ this.handleChangeTeamASize }>5</ToggleButton>
+                        </ToggleButtonGroup>
+
+                        <div className="teamSizeToolBar"> 
+                            <label className="teamLabel"> Team B : 
+                                <p className="teamBplayer">{ teamAsize ? teamBsize : "" } </p>
+                            </label>
+                        </div>
+                    </ButtonToolbar>
 
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
@@ -81,7 +90,8 @@ class TeamGenerator extends Component {
                 >Generate Teams</Button>
 
 
-                { teamGenerated && fullPlayer ? null 
+                { teamGenerated && fullPlayer ? 
+                    <p className= "errorMessage"> Don't like the teams? <br/>change the number of players in each team and shuffle it again </p>  
                     : teamGenerated && !fullPlayer ? 
                     <p className= "errorMessage"> Please enter 10 players' name first </p> 
                     : null
@@ -93,10 +103,13 @@ class TeamGenerator extends Component {
                     <div className ="teamAcontainer">
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team A</p>
-                                {teamA.map((current, i) => {
+                                { teamA.map((current, i) => {
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{ current }</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">
+                                                <span className="playerList-player">{ current.player }</span>
+                                                <span className="playerList-position">{ current.position }</span>
+                                            </ListGroup.Item>
                                         </div>
                                         ) 
                                 })}
@@ -106,20 +119,22 @@ class TeamGenerator extends Component {
                     <div className ="teamBcontainer">
                         <ListGroup variant="flush">
                             <p className ="teamHeader">Team B</p>
-                                {teamB.map((current, i) => {
+                                { teamB.map((current, i) => {
                                     return (
                                         <div className="listContainer" key={i}> 
-                                            <ListGroup.Item className="listItems">{current}</ListGroup.Item>
+                                            <ListGroup.Item className="listItems">
+                                                <span className="playerList-player">{ current.player }</span>
+                                                <span className="playerList-position">{ current.position }</span>
+                                            </ListGroup.Item>
                                         </div>
                                         )
-                            
                                 })}
                         </ListGroup>
                     </div>
                 </div>
-                </>
-                }
-            </>    
+                </> 
+            }
+            </form>   
         );
     }
 }

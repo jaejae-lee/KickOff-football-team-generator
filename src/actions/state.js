@@ -1,7 +1,9 @@
+import { exportDefaultSpecifier } from "@babel/types";
+
 export const addPlayer = (form) => {
     return {
         type: "addPlayer",
-        form : form
+        form
     };
 };
 
@@ -13,17 +15,28 @@ export const reset = () => {
 
 export const generateTeams = (playerList) => {
 
+    function shuffleArray (array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const arrPlayerList = playerList.playerList;
+    const shuffledplayerList = shuffleArray(arrPlayerList)
     const teamA = []; 
     const teamB = []; 
 
-     for(let i = 0; i <= playerList.playerList.length; i++){
+    //generated two arrays
+    shuffledplayerList.map((item , index) => {
         if(teamA.length < playerList.teamAsize){
-            teamA.push(playerList.playerList[i]);
+            teamA.push(shuffledplayerList[index]);
         }else{
-            teamB.push(playerList.playerList[i]);
+            teamB.push(shuffledplayerList[index]);
         }
-    }
-    
+    })
+
     return {
         type: "generateTeams",
         payload : { teamA, teamB }

@@ -6,13 +6,17 @@ const reset = (initial) => {
     };
 }
 
-const addPlayer = (state, action) => ({
-    ...state, 
-    player: action.form.player,
-    nameError: action.form.nameError,
-    submitted: action.form.submitted,
-    playerList : action.form.player ? [...action.form.playerList, action.form.player] : [...action.form.playerList]
-});
+const addPlayer = (state, action) => {
+    const playerObj = {
+        player: action.form.player,
+        position: action.form.position,  
+    }
+
+    return {
+        ...state,
+        playerList: action.form.player ?[...state.playerList, playerObj] : [...state.playerList]
+    }
+}
 
 const generateTeams = (state, action) => ({
     ...state, 
@@ -24,6 +28,10 @@ const deletePlayer = (state, action) => ({
    ...state,
    playerList: action.playerList
 });
+
+// const initialState = {
+//     playerList: []
+// };
 
 const reducer = (state, action) => {
     switch (action.type){

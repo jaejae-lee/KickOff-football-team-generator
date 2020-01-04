@@ -32,38 +32,31 @@ redux dev tool
 speed
 
 ### What's next..
+React hooks 
+api 
 
-
-
-
-
-
-
-
-
-split based on positions
-
-player delete func.EJ
-select position - radio - save ?
-
-delete all players.
-bg img optimazation
-
-DEBUGGING
 
 3rd: 
+
 why it pushs empty string into the playerList array??
 del button icon add
+mobile ver layout fix
 CV
-football position?
+
 
 4th
 Sass
+wireframe finish
 
 5th
 git hub ReadME
-wireframe finish
+-add readme about google font.
+-changed bits 
+-detail description of error messages and calculation etc
+
 screenshot add 
+github site hosting
+
 
 
 

@@ -1,0 +1,49 @@
+//list style general
+.listHeader{
+    font-family: $fontMain;
+    font-size: 2.5rem; 
+    color: $ColourMain;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.listContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+   
+    .listItems{
+        font-family: $fontSub;
+        width: 100%;
+        margin: 5px;
+        font-size: 1.3rem;
+        padding: 0.5rem 1.25rem;
+
+        .playerList-player{
+            font-family: $fontMain;
+            color: $ColourThird;
+            margin-right: 20px;
+            font-size: 1.5rem;
+
+            //on smaller screens
+            @media screen and(max-width : 600px){
+                font-size: 1rem;
+            }
+        }
+
+        .playerList-position{
+            font-family: $fontMain;
+            background-color: $ColourForth;
+            padding: 5px;
+            color: white;
+
+             //on smaller screens
+            @media screen and(max-width : 600px){
+                font-size: 1rem;
+            }
+        }
+    } 
+
+
+}
