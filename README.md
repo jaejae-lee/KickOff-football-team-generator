@@ -9,7 +9,7 @@ A tool which randomly divide two n-a-side football teams from a list of 10 playe
 3. run npm install 
 4. run npm start to view on localhost:3000 on browser
 
-You can view the live app here:
+You can view the live app here: https://jaejae-lee.github.io/KickOff-football-team-generator/
 
 ## Technologies and skills used
 React/Redux, JSX, JavaScript, HTML, CSS/SASS, Git, Wireframing.
@@ -34,35 +34,34 @@ Each team need to has one of each position player.
 ![wireFrames](./wireFrames/wireFrame-2.png)
 ![wireFrames](./wireFrames/wireFrame-3.png)
 
-
 ## Mockup - Small screen
 <span style="display:inline;text-align:center">
-    <img src="./mockups/small-landing.png" width="420">
+    <img src="./mockups/small-landing.png" width="400">
 </span>
 <span style="display:inline;text-align:center">
-    <img src="./mockups/small-playerlist.png" width="420">
+    <img src="./mockups/small-playerlist.png" width="385">
 </span>
 <span style="display:inline;text-align:center">
-    <img src="./mockups/small-teamlist.png" width="420">
+    <img src="./mockups/small-teamlist.png" width="400">
 </span>
 
 ## Mockup - Medium screen
 <span style="display:inline;text-align:center">
-    <img src="./mockups/medium-landing.png" width="800">
+    <img src="./mockups/medium-landing.png" width="650">
 </span>
 <span style="display:inline;text-align:center">
-    <img src="./mockups/medium-playerlist.png" width="800">
+    <img src="./mockups/medium-playerlist.png" width="650">
 </span>
 
 ##  Mockup - Large screen
 <span style="display:inline;text-align:center;margin:0">
-    <img src="./mockups/large-landing.png" width="900">
+    <img src="./mockups/large-landing.png" width="920">
 </span>
 <span style="display:inline;text-align:center;margin:0">
-    <img src="./mockups/large-playerlist.png" width="900">
+    <img src="./mockups/large-playerlist.png" width="920">
 </span>
 <span style="display:inline;text-align:center;margin:0">
-    <img src="./mockups/large-teamlist.png" width="900">
+    <img src="./mockups/large-teamlist.png" width="920">
 </span>
 
 
