@@ -30,16 +30,42 @@ Each team need to has one of each position player.
 
 ## Wireframes with notes
 
-![wireFrames](./wireFrames/wireFrame-1.png)
+![wireFrames](./mockups/wireFrame-1.png)
 ![wireFrames](./wireFrames/wireFrame-2.png)
 ![wireFrames](./wireFrames/wireFrame-3.png)
 
 
-## Screenshots - Small screen
+## Mockup - Small screen
+<span style="display:inline;text-align:center">
+    <img src="./mockups/small-landing.png" width="420">
+</span>
+<span style="display:inline;text-align:center">
+    <img src="./mockups/small-playerlist.png" width="420">
+</span>
+<span style="display:inline;text-align:center">
+    <img src="./mockups/small-teamlist.png" width="420">
+</span>
 
-## Screenshots - Medium screen
+## Mockup - Medium screen
+<span style="display:inline;text-align:center">
+    <img src="./mockups/medium-landing.png" width="600">
+</span>
+<span style="display:inline;text-align:center">
+    <img src="./mockups/medium-playerlist.png" width="600">
+</span>
 
-##  Screenshots - Large screen
+##  Mockup - Large screen
+
+<span style="display:inline;text-align:center;margin:auto">
+    <img src="./mockups/large-landing.png" width="600">
+</span>
+<span style="display:inline;text-align:center">
+    <img src="./mockups/large-playerlist.png" width="600">
+</span>
+<span style="display:inline;text-align:center">
+    <img src="./mockups/large-teamlist.png" width="600">
+</span>
+
 
 ##  Testing
 Google Dev Tools to check on it's performance with the full background image inserted
