@@ -6,7 +6,7 @@ const initial = {
     teamA: [],
     teamB: [],
     teamGenerated: false,
-    teamAsize: "",
+    teamAsize: 5
   };
   
   export default initial;

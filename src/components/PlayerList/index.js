@@ -8,7 +8,6 @@ const mapStateToProps = state => {
         playerList: state.playerList,
         position: state.position,
         fullPlayer: state.fullPlayer,
-        submitted: state.submitted,
     };
 };
 

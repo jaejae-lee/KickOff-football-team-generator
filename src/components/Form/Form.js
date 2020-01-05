@@ -11,6 +11,7 @@ class Form extends Component {
             playerList: props.playerList,
             fullPlayer: props.fullPlayer,
             nameError: false,
+            positionError: false,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
@@ -20,31 +21,63 @@ class Form extends Component {
 
     handleChangeName(e) {
         this.setState({
-            player: e.currentTarget.value,  
+            player: e.currentTarget.value,
         })
     }
 
     handleChangePosition(e){
-        this.setState({ position:e.currentTarget.value });
+        this.setState({ 
+            position:e.currentTarget.value,
+            positionError: false
+        });
    };
     
     handleSubmit(e) {
         e.preventDefault();
-        
+
         let { playerList } = this.props;
+        let { player, position } = this.state;
+
+        let positions = playerList.map(playerobj => playerobj.position)
+        let defenders = positions.filter(position => position === "defender")
+        let goalkeepers = positions.filter(position => position === "goalkeeper")
+        let strikers = positions.filter(position => position === "striker")
+        let midfielders = positions.filter(position => position === "midfielder")
 
         this.props.handleSave(this.state); 
 
-        if(this.state.player === "") {
+        if(player === "") {
             this.setState({
                 nameError: true,
+                positionError: this.state.positionError,
             })
-        }else if(this.state.player !== ""){
+        }
+        if(position === "defender" && defenders.length == 2){
+            this.setState({
+                positionError: true,
+            })
+        }else if(position === "goalkeeper" && goalkeepers.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }else if(position === "striker" && strikers.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }else if(position === "midfielder" && midfielders.length >= 2){
+            this.setState({
+                positionError: true,
+            })
+        }else if(player !== ""){
             this.setState({
                 nameError: false,
-                player: ""
+                positionError: this.state.positionError,
+                player: "",
             })
-
+        }else{
+            this.setState({
+                positionError: this.state.positionError,
+            })
         }
         if(playerList.length === 9) {
             this.setState({
@@ -55,10 +88,9 @@ class Form extends Component {
     
     render() { 
 
-        let { player, nameError } = this.state;
+        let { player, position, nameError, positionError } = this.state;
 
         return (
-            
             <form onSubmit={ ()=>this.handleSubmit }
                   className="form">
                 <InputGroup className="mb-3">
@@ -67,29 +99,33 @@ class Form extends Component {
                                  onChange={ this.handleChangeName }  
                     />
 
+                    { !nameError? null : 
+                        <p className= "errorMessage"> Please enter player's name</p> 
+                    }
+
                 <ButtonToolbar className="positionToolBar">
-                    <ToggleButtonGroup className="buttonContainer" type="radio" name="options" defaultValue={1}>
+                    <ToggleButtonGroup className="buttonContainer" type="radio" name="options">
                         <label className="positionLabel">I'm a ...</label>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"anything"} 
                                         onChange={ this.handleChangePosition }>Anything</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"defender"} 
                                         onChange={ this.handleChangePosition }>Defender</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"goalkeeper"} 
                                         onChange={ this.handleChangePosition }>Goalkeeper</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"striker"} 
                                         onChange={ this.handleChangePosition }>Striker</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"midfielder"} 
                                         onChange={ this.handleChangePosition }>Midfielder</ToggleButton>
                     </ToggleButtonGroup>
                 </ButtonToolbar>
 
-                    { !nameError? null : 
-                        <p className= "errorMessage"> Please enter player's name
+                    { !positionError ? null : 
+                        <p className= "errorMessage"> Enough { position }s now, select other positions
                         </p> 
                     }
 
@@ -97,6 +133,7 @@ class Form extends Component {
                         <p className= "errorMessage">  Now generate your team!
                         </p> 
                     }
+                    
                 </InputGroup>
 
                 <Button className = "button"

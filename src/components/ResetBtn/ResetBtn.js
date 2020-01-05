@@ -23,8 +23,8 @@ class ResetBtn extends Component {
     render() { 
         return (
             <Button className = "button resetBtn"
-            variant="primary" size="lg"
-            onClick={ this.handleReset }>Reset</Button>
+                    variant="primary" size="lg"
+                    onClick={ this.handleReset }>Reset</Button>
         );
     }
 }

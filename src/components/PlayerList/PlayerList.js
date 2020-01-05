@@ -29,12 +29,10 @@ class PlayerList extends Component {
         return (
             <>
             { playerList.length === 0 || teamGenerated ? null :
-                <>
+            <>
                 <h2 className="listHeader">Today's players</h2>
-
                 <ListGroup variant="flush">
                     { playerList.map((current, i) => {
-
                             return (
                                 <div className="listContainer" key={i}> 
                                     <ListGroup.Item className="listItems">
@@ -43,15 +41,13 @@ class PlayerList extends Component {
                                     </ListGroup.Item>
 
                                     <Button className="delBtn"
-                                            onClick={()=>{this.handlePlayerDelete(i)}}>
-                                    Del
-                                    </Button>
+                                            onClick={()=>{this.handlePlayerDelete(i)}}>Del</Button>
                                 </div>
                             )
                         }) 
                     }
                 </ListGroup>
-                </>
+            </>
             }  
             </> 
         );

@@ -4,7 +4,6 @@ import '../../css/style.css';
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-
 import Form from '../Form'
 import PlayerList from '../PlayerList'
 import TeamGenerator from '../TeamGenerator';
