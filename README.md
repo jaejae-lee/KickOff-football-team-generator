@@ -1,5 +1,5 @@
 
-## KICK OFF - your football-team-generator
+## KICK OFF! - your football-team-generator
 A tool which randomly divide two n-a-side football teams from a list of 10 players.
 
 ## How to set up
@@ -30,7 +30,7 @@ Each team need to has one of each position player.
 
 ## Wireframes with notes
 
-![wireFrames](./mockups/wireFrame-1.png)
+![wireFrames](./wireFrames/wireFrame-1.png)
 ![wireFrames](./wireFrames/wireFrame-2.png)
 ![wireFrames](./wireFrames/wireFrame-3.png)
 
@@ -48,22 +48,21 @@ Each team need to has one of each position player.
 
 ## Mockup - Medium screen
 <span style="display:inline;text-align:center">
-    <img src="./mockups/medium-landing.png" width="600">
+    <img src="./mockups/medium-landing.png" width="800">
 </span>
 <span style="display:inline;text-align:center">
-    <img src="./mockups/medium-playerlist.png" width="600">
+    <img src="./mockups/medium-playerlist.png" width="800">
 </span>
 
 ##  Mockup - Large screen
-
-<span style="display:inline;text-align:center;margin:auto">
-    <img src="./mockups/large-landing.png" width="600">
+<span style="display:inline;text-align:center;margin:0">
+    <img src="./mockups/large-landing.png" width="900">
 </span>
-<span style="display:inline;text-align:center">
-    <img src="./mockups/large-playerlist.png" width="600">
+<span style="display:inline;text-align:center;margin:0">
+    <img src="./mockups/large-playerlist.png" width="900">
 </span>
-<span style="display:inline;text-align:center">
-    <img src="./mockups/large-teamlist.png" width="600">
+<span style="display:inline;text-align:center;margin:0">
+    <img src="./mockups/large-teamlist.png" width="900">
 </span>
 
 
