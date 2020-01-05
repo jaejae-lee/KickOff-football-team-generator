@@ -26,7 +26,6 @@ export const generateTeams = (playerList) => {
     const teamA = []; 
     const teamB = []; 
 
-    //generated two arrays
     shuffledplayerList.map((item , index) => {
         if(teamA.length < playerList.teamAsize){
             teamA.push(shuffledplayerList[index]);

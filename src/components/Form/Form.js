@@ -34,7 +34,7 @@ class Form extends Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        
+
         let { playerList } = this.props;
         let { player, position } = this.state;
 
@@ -72,14 +72,13 @@ class Form extends Component {
             this.setState({
                 nameError: false,
                 positionError: this.state.positionError,
-                //player: "",
+                player: "",
             })
         }else{
             this.setState({
                 positionError: this.state.positionError,
             })
         }
-        
         if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
@@ -90,10 +89,8 @@ class Form extends Component {
     render() { 
 
         let { player, position, nameError, positionError } = this.state;
-        console.log(positionError, "positionError")
-        console.log(nameError, "nameError")
+
         return (
-            
             <form onSubmit={ ()=>this.handleSubmit }
                   className="form">
                 <InputGroup className="mb-3">
@@ -103,26 +100,25 @@ class Form extends Component {
                     />
 
                     { !nameError? null : 
-                        <p className= "errorMessage"> Please enter player's name
-                        </p> 
+                        <p className= "errorMessage"> Please enter player's name</p> 
                     }
 
                 <ButtonToolbar className="positionToolBar">
                     <ToggleButtonGroup className="buttonContainer" type="radio" name="options">
                         <label className="positionLabel">I'm a ...</label>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"anything"} 
                                         onChange={ this.handleChangePosition }>Anything</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"defender"} 
                                         onChange={ this.handleChangePosition }>Defender</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"goalkeeper"} 
                                         onChange={ this.handleChangePosition }>Goalkeeper</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"striker"} 
                                         onChange={ this.handleChangePosition }>Striker</ToggleButton>
-                        <ToggleButton className="button positionBtn" 
+                        <ToggleButton   className="button positionBtn" 
                                         value={"midfielder"} 
                                         onChange={ this.handleChangePosition }>Midfielder</ToggleButton>
                     </ToggleButtonGroup>
@@ -137,6 +133,7 @@ class Form extends Component {
                         <p className= "errorMessage">  Now generate your team!
                         </p> 
                     }
+                    
                 </InputGroup>
 
                 <Button className = "button"

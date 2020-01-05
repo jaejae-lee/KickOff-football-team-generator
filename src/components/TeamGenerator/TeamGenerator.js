@@ -19,7 +19,6 @@ class TeamGenerator extends Component {
         this.handleChangeTeamASize = this.handleChangeTeamASize.bind(this); 
     }
     
-
     handleChangeTeamASize(e) {
         this.setState({
             teamAsize: e.currentTarget.value,
@@ -31,7 +30,7 @@ class TeamGenerator extends Component {
 
         let { playerList } = this.props;
 
-         this.props.generateTeams({...this.state, playerList})
+        this.props.generateTeams({...this.state, playerList})
 
         this.setState({
             teamGenerated: true,
@@ -51,16 +50,11 @@ class TeamGenerator extends Component {
         let { fullPlayer, teamGenerated, teamAsize } = this.state;
         let teamBsize = playerList.length - teamAsize;
 
-        console.log(teamAsize, "teamAsize")
-        console.log(teamGenerated, "teamGenerated")
-        
-
         return (
-
             <form className="form">
                 <ButtonToolbar className="teamSizeToolBar">
                     <label className="teamLabel">How many players in each team ? <br/> Team A :</label>
-                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options"  defaultValue={5} >
+                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio"     name="options"  defaultValue={5} >
                             <ToggleButton className="button teamSizeBtn" 
                                           value={0} 
                                           onChange={ this.handleChangeTeamASize }>0</ToggleButton>
@@ -91,19 +85,18 @@ class TeamGenerator extends Component {
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
                         onClick={ this.handleTeamSubmit }
-                        // disabled={ teamAsize === "" ? true : false}
                 >Generate Teams</Button>
 
 
                 { teamGenerated && fullPlayer ? 
-                    <p className= "errorMessage"> Don't like the teams? <br/>Change the number of players in each team and shuffle it again! </p>  
+                    <p className= "errorMessage"> Don't like the teams?<br/>Change the number of players in each team and shuffle it again!</p>  
                     : teamGenerated && !fullPlayer ? 
-                    <p className= "errorMessage"> Please enter 10 players first </p> 
+                    <p className= "errorMessage">Please enter 10 players first</p> 
                     : null
                 } 
 
                 { teamGenerated && teamAsize === "" ? 
-                    <p className= "errorMessage">  Please select the number of players for each team </p>  
+                    <p className= "errorMessage">Please select the number of players for each team</p>
                     : null
                 }   
                  
@@ -121,7 +114,7 @@ class TeamGenerator extends Component {
                                                 <span className="playerList-position">{ current.position }</span>
                                             </ListGroup.Item>
                                         </div>
-                                        ) 
+                                    ) 
                                 })}
                         </ListGroup>
                     </div>
@@ -137,7 +130,7 @@ class TeamGenerator extends Component {
                                                 <span className="playerList-position">{ current.position }</span>
                                             </ListGroup.Item>
                                         </div>
-                                        )
+                                    )
                                 })}
                         </ListGroup>
                     </div>
