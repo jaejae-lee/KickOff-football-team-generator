@@ -12,6 +12,7 @@ class Form extends Component {
             fullPlayer: props.fullPlayer,
             nameError: false,
             positionError: false,
+            positionEmpty: false,
         }
 
         this.handleChangeName = this.handleChangeName.bind(this);
@@ -52,6 +53,12 @@ class Form extends Component {
                 positionError: this.state.positionError,
             })
         }
+        if(position === ""){
+            this.setState({
+                positionEmpty: true,
+                player: this.state.player
+            })
+        }
         if(position === "defender" && defenders.length == 2){
             this.setState({
                 positionError: true,
@@ -88,7 +95,7 @@ class Form extends Component {
     
     render() { 
 
-        let { player, position, nameError, positionError } = this.state;
+        let { player, position, nameError, positionError, positionEmpty } = this.state;
 
         return (
             <form onSubmit={ ()=>this.handleSubmit }
@@ -128,6 +135,10 @@ class Form extends Component {
                         <p className= "errorMessage"> Enough { position }s now, select other positions
                         </p> 
                     }
+
+                    { !positionEmpty ? null : 
+                        <p className= "errorMessage"> Please select your position</p> 
+                    }   
 
                     { this.props.playerList.length !== 10 ? null : 
                         <p className= "errorMessage">  Now generate your team!
