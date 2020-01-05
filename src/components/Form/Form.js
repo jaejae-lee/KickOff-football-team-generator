@@ -21,7 +21,7 @@ class Form extends Component {
 
     handleChangeName(e) {
         this.setState({
-            player: e.currentTarget.value,  
+            player: e.currentTarget.value,
         })
     }
 
@@ -36,7 +36,7 @@ class Form extends Component {
         e.preventDefault();
         
         let { playerList } = this.props;
-        let { player, position, positionError } = this.state;
+        let { player, position } = this.state;
 
         let positions = playerList.map(playerobj => playerobj.position)
         let defenders = positions.filter(position => position === "defender")
@@ -108,7 +108,7 @@ class Form extends Component {
                     }
 
                 <ButtonToolbar className="positionToolBar">
-                    <ToggleButtonGroup className="buttonContainer" type="radio" name="options" defaultValue={1}>
+                    <ToggleButtonGroup className="buttonContainer" type="radio" name="options">
                         <label className="positionLabel">I'm a ...</label>
                         <ToggleButton className="button positionBtn" 
                                         value={"anything"} 

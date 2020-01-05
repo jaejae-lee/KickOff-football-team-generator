@@ -60,7 +60,7 @@ class TeamGenerator extends Component {
             <form className="form">
                 <ButtonToolbar className="teamSizeToolBar">
                     <label className="teamLabel">How many players in each team ? <br/> Team A :</label>
-                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options">
+                        <ToggleButtonGroup className="teamSizeBtnContainer" type="radio" name="options"  defaultValue={5} >
                             <ToggleButton className="button teamSizeBtn" 
                                           value={0} 
                                           onChange={ this.handleChangeTeamASize }>0</ToggleButton>
@@ -91,7 +91,7 @@ class TeamGenerator extends Component {
                 <Button className="button teamGenerateBtn"
                         variant="primary" size="lg" block
                         onClick={ this.handleTeamSubmit }
-                        disabled={ teamAsize === "" ? true : false}
+                        // disabled={ teamAsize === "" ? true : false}
                 >Generate Teams</Button>
 
 
