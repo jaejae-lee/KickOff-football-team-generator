@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/KickOff-football-team-generator/static/css/main.b8c2cf9a.chunk.css",
+    "main.js": "/KickOff-football-team-generator/static/js/main.3a6e8800.chunk.js",
+    "main.js.map": "/KickOff-football-team-generator/static/js/main.3a6e8800.chunk.js.map",
+    "runtime-main.js": "/KickOff-football-team-generator/static/js/runtime-main.dd40c589.js",
+    "runtime-main.js.map": "/KickOff-football-team-generator/static/js/runtime-main.dd40c589.js.map",
+    "static/js/2.3f5cd8d0.chunk.js": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js",
+    "static/js/2.3f5cd8d0.chunk.js.map": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js.map",
+    "index.html": "/KickOff-football-team-generator/index.html",
+    "precache-manifest.85c7c504da596e8596d61d84055aed07.js": "/KickOff-football-team-generator/precache-manifest.85c7c504da596e8596d61d84055aed07.js",
+    "service-worker.js": "/KickOff-football-team-generator/service-worker.js",
+    "static/css/main.b8c2cf9a.chunk.css.map": "/KickOff-football-team-generator/static/css/main.b8c2cf9a.chunk.css.map",
+    "static/js/2.3f5cd8d0.chunk.js.LICENSE": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js.LICENSE",
+    "static/media/style.css": "/KickOff-football-team-generator/static/media/smallScreen.afb41ea8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd40c589.js",
+    "static/js/2.3f5cd8d0.chunk.js",
+    "static/css/main.b8c2cf9a.chunk.css",
+    "static/js/main.3a6e8800.chunk.js"
+  ]
+}
