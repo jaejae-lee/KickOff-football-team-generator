@@ -6,8 +6,8 @@ A tool which randomly divide two n-a-side football teams from a list of 10 playe
 
 1. NPM and a Command Line tool is needed.
 2. git clone this repo and cd into the project folder
-3. run npm install 
-4. run npm start to view on localhost:3000 on browser
+3. run `npm install`
+4. run `npm start` to view on localhost:3000 on browser
 
 You can view the live app here: https://jaejae-lee.github.io/KickOff-football-team-generator/
 
