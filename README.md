@@ -97,14 +97,17 @@ team A {
 
 **Front-end programming/styling update:**
 
-* More functionalities : limit the number of position when user pick - only two players are allowed in each position.
+* **More functionalities :** 
+limit the number of position when user pick - only two players are allowed in each position.
 divide teams based on the position - each team has one of each position.
 
-* Explore react hooks : I've come across about React hooks while I was researching. I didn't use in thie project as I focused on applying the logic I already practiced on the course. But always happy to explore new tools.
+* **Explore react hooks :**
+I've come across about React hooks while I was researching. I didn't use in thie project as I focused on applying the logic I already practiced on the course. But always happy to explore new tools.
 
-* Explore react pre-built components : also come across react pre built components and seems like I can do lots of fun things with them ( ex. color picker - my favorite) which haven't got a chance to apply in this project yet. Look forward to exploring them.
+* **Explore react pre-built components :**
+also come across react pre built components and seems like I can do lots of fun things with them ( ex. color picker - my favorite) which haven't got a chance to apply in this project yet. Look forward to exploring them.
 
-* Explore more Sass functions:
+* **Explore more Sass functions:**
 brush up the current sass code with mixins, extends.
 which I have't used in this app as I put a priority on better react/redux code then styling.
 
