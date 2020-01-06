@@ -18,7 +18,7 @@ React/Redux, JSX, JavaScript, HTML, CSS/SASS, Git, Wireframing.
 **MVP : Generate randomly picking a 5-a-side football team from a list of 10 names.<br/>
 Advanced feature can be : user to pick n-a-side, user can pick a position(stricker, Defender, Mid-fielder, Goal-keeper..), divide teams by players' position**
 
-* **Programming perspective:**
+* **Programming perspective:** 
 MVP: Need to take user input -> store in an array -> divide into two arrays (push items in random order)
 Advanced: Need to store as an object with key of player name and position into an array.
 Limit the number of players on each position when user pick.
@@ -26,7 +26,7 @@ Each team need to has one of each position player.
 
 * **UX perspective:**  don't confuss users of where to input information and what to do - provide clear and intuitive visual guidance and easy to use UI.
 
-* **UI perspective:** small screen(mobile/tablet) optimised design focus, as expecting a lot more use on them rather than desktop.
+* **UI perspective:** Responsive design. Small screen(mobile/tablet) optimised design focus, as expecting a lot more use on them rather than desktop.
 
 ## Wireframes with notes
 
@@ -70,7 +70,9 @@ Google Dev Tools to check on it's performance with the full background image ins
 Mostly used google chrome with the use of redux dev tool. Testing on firefox and safari as well.
 
 ## What's next..
-**Information structure - build api :**
+Once I managed to finish my MVP, I decided to add some advanced functionalities such as chosing positions and team size. But here's more I would like to try...
+
+**Back-end data set up - build api :**
 
 I'd be tempted to build an api with laravel and connect into the front-end.
 would use one-to-many(each team has many players) relationship.
@@ -93,12 +95,14 @@ team A {
 ```
 
 
-**Front-end programming - React/redux :**
+**Front-end programming/styling update:**
 
 * More functionalities : limit the number of position when user pick - only two players are allowed in each position.
 divide teams based on the position - each team has one of each position.
 
 * Explore react hooks : I've come across about React hooks while I was researching. I didn't use in thie project as I focused on applying the logic I already practiced on the course. But always happy to explore new tools.
+
+* Explore react pre-built components : also come across react pre built components and seems like I can do lots of fun things with them ( ex. color picker - my favorite) which haven't got a chance to apply in this project yet. Look forward to exploring them.
 
 * Explore more Sass functions:
 brush up the current sass code with mixins, extends.
