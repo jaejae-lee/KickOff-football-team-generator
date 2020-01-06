@@ -15,7 +15,7 @@ You can view the live app here: https://jaejae-lee.github.io/KickOff-football-te
 React/Redux, JSX, JavaScript, HTML, CSS/SASS, Git, Wireframing.
 
 ## Initial ideation and planning
-**MVP : Generate randomly picking a 5-a-side football team from a list of 10 names.
+**MVP : Generate randomly picking a 5-a-side football team from a list of 10 names.<br/>
 Advanced feature can be : user to pick n-a-side, user can pick a position(stricker, Defender, Mid-fielder, Goal-keeper..), divide teams by players' position**
 
 * **Programming perspective:**
