@@ -149,7 +149,7 @@ h1 p, .h1 p, .header p {
 }
 
 .teamSizeBtnContainer, .teamSizeBtnContainer, .teamSizeBtnContainer {
-  width: 124%;
+  width: 110%;
   display: flex;
   justify-content: space-between;
 }

@@ -45,52 +45,59 @@ class Form extends Component {
         let strikers = positions.filter(position => position === "striker")
         let midfielders = positions.filter(position => position === "midfielder")
 
-        this.props.handleSave(this.state); 
+        //if logic refactored - check all the error and if there's an error return nothing(don't dispatch action)
+        // after all the checks -> dispatch habdlesave(addplayer)
+        // after done all work -> flush the input field.
 
-        if(player === "") {
+        if (!player){
             this.setState({
                 nameError: true,
                 positionError: this.state.positionError,
             })
+            return 
         }
-        if(position === ""){
+        if(!position){
             this.setState({
                 positionEmpty: true,
-                player: this.state.player
             })
+            return 
         }
-        if(position === "defender" && defenders.length == 2){
+        if(position === "defender" && defenders.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }else if(position === "goalkeeper" && goalkeepers.length >= 2){
+            return 
+        }
+        if(position === "goalkeeper" && goalkeepers.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }else if(position === "striker" && strikers.length >= 2){
+            return 
+        }
+        if(position === "striker" && strikers.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }else if(position === "midfielder" && midfielders.length >= 2){
+            return 
+        }
+        if(position === "midfielder" && midfielders.length >= 2){
             this.setState({
                 positionError: true,
             })
-        }else if(player !== ""){
-            this.setState({
-                nameError: false,
-                positionError: this.state.positionError,
-                player: "",
-            })
-        }else{
-            this.setState({
-                positionError: this.state.positionError,
-            })
+            return 
         }
         if(playerList.length === 9) {
             this.setState({
                 fullPlayer: true
             })
-        }   
+        } 
+
+        this.props.handleSave(this.state); 
+
+        this.setState({
+            player: "",
+        })
+        
     }
     
     render() { 
