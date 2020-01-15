@@ -72,16 +72,6 @@ Mostly used google chrome with the use of redux dev tool. Testing on firefox and
 ## What's next..
 Once I managed to finish my MVP, I decided to add some advanced functionalities such as chosing positions and team size. But here's more I would like to try...
 
-**Bug fix:**
-There's a bug when you select a position at third time.
-
-My intention is to limit 2 people for one postion.
-When the error message saying "this position is full, please choose other positions" pops up, it still add the third person of the position in the playerlist below. 
-
-I had fo wrap up and submit this project to developMe ( a bootcamp that I attended) due to tight due date but definitely plan to fix the bug soon. 
-
-Thanks fot your understanding.
-
 **Back-end data set up - build api :**
 
 I'd be tempted to build an api with laravel and connect into the front-end.
