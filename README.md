@@ -34,7 +34,7 @@ Each team need to has one of each position player.
 ![wireFrames](./wireFrames/wireFrame-2.png)
 ![wireFrames](./wireFrames/wireFrame-3.png)
 
-## Mockup - Small screen
+## Screenshots - Small screen
 <span style="display:inline;text-align:center">
     <img src="./mockups/small-landing.png" width="400">
 </span>
@@ -45,7 +45,7 @@ Each team need to has one of each position player.
     <img src="./mockups/small-teamlist.png" width="400">
 </span>
 
-## Mockup - Medium screen
+## Screenshots - Medium screen
 <span style="display:inline;text-align:center">
     <img src="./mockups/medium-landing.png" width="650">
 </span>
@@ -53,7 +53,7 @@ Each team need to has one of each position player.
     <img src="./mockups/medium-playerlist.png" width="650">
 </span>
 
-##  Mockup - Large screen
+##  Screenshots - Large screen
 <span style="display:inline;text-align:center;margin:0">
     <img src="./mockups/large-landing.png" width="920">
 </span>
