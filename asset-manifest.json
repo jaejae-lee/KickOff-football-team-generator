@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/KickOff-football-team-generator/static/css/main.4d134640.chunk.css",
-    "main.js": "/KickOff-football-team-generator/static/js/main.7632aeb5.chunk.js",
-    "main.js.map": "/KickOff-football-team-generator/static/js/main.7632aeb5.chunk.js.map",
+    "main.js": "/KickOff-football-team-generator/static/js/main.cde70fda.chunk.js",
+    "main.js.map": "/KickOff-football-team-generator/static/js/main.cde70fda.chunk.js.map",
     "runtime-main.js": "/KickOff-football-team-generator/static/js/runtime-main.dd40c589.js",
     "runtime-main.js.map": "/KickOff-football-team-generator/static/js/runtime-main.dd40c589.js.map",
-    "static/js/2.3f5cd8d0.chunk.js": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js",
-    "static/js/2.3f5cd8d0.chunk.js.map": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js.map",
+    "static/js/2.15566036.chunk.js": "/KickOff-football-team-generator/static/js/2.15566036.chunk.js",
+    "static/js/2.15566036.chunk.js.map": "/KickOff-football-team-generator/static/js/2.15566036.chunk.js.map",
     "index.html": "/KickOff-football-team-generator/index.html",
-    "precache-manifest.a7dbacd0963997b27be4b0f391e46929.js": "/KickOff-football-team-generator/precache-manifest.a7dbacd0963997b27be4b0f391e46929.js",
+    "precache-manifest.00351a5dea2fb2b77fa5e5199543e097.js": "/KickOff-football-team-generator/precache-manifest.00351a5dea2fb2b77fa5e5199543e097.js",
     "service-worker.js": "/KickOff-football-team-generator/service-worker.js",
     "static/css/main.4d134640.chunk.css.map": "/KickOff-football-team-generator/static/css/main.4d134640.chunk.css.map",
-    "static/js/2.3f5cd8d0.chunk.js.LICENSE": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js.LICENSE",
+    "static/js/2.15566036.chunk.js.LICENSE": "/KickOff-football-team-generator/static/js/2.15566036.chunk.js.LICENSE",
     "static/media/style.css": "/KickOff-football-team-generator/static/media/smallScreen.afb41ea8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd40c589.js",
-    "static/js/2.3f5cd8d0.chunk.js",
+    "static/js/2.15566036.chunk.js",
     "static/css/main.4d134640.chunk.css",
-    "static/js/main.7632aeb5.chunk.js"
+    "static/js/main.cde70fda.chunk.js"
   ]
 }

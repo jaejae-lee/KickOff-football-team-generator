@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/KickOff-football-team-generator/precache-manifest.a7dbacd0963997b27be4b0f391e46929.js"
+  "/KickOff-football-team-generator/precache-manifest.00351a5dea2fb2b77fa5e5199543e097.js"
 );
 
 self.addEventListener('message', (event) => {

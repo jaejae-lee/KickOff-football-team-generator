@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9cb19b4ff54d348663a18f5facaa3e32",
+    "revision": "6eebc18728a2cbae270197fae195408c",
     "url": "/KickOff-football-team-generator/index.html"
   },
   {
-    "revision": "5e8f5781380ed0118817",
+    "revision": "196a329870cd0613fe79",
     "url": "/KickOff-football-team-generator/static/css/main.4d134640.chunk.css"
   },
   {
-    "revision": "38ca27c61d50ed46ef29",
-    "url": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js"
+    "revision": "e1b363f509c251ebaeff",
+    "url": "/KickOff-football-team-generator/static/js/2.15566036.chunk.js"
   },
   {
     "revision": "86afaa925e0f432774bf95b19b6933fb",
-    "url": "/KickOff-football-team-generator/static/js/2.3f5cd8d0.chunk.js.LICENSE"
+    "url": "/KickOff-football-team-generator/static/js/2.15566036.chunk.js.LICENSE"
   },
   {
-    "revision": "5e8f5781380ed0118817",
-    "url": "/KickOff-football-team-generator/static/js/main.7632aeb5.chunk.js"
+    "revision": "196a329870cd0613fe79",
+    "url": "/KickOff-football-team-generator/static/js/main.cde70fda.chunk.js"
   },
   {
     "revision": "dc59d8e0cef17ede3fa6",
